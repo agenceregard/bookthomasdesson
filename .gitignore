@@ -1,0 +1,17 @@
+# Ne PAS envoyer sur GitHub — fichiers de travail / lourds / inutiles
+.DS_Store
+.claude/
+ffmpeg
+ffprobe
+yt-dlp
+*.MOV
+*.mov
+Demo Reel Thomas Desson.mp4
+book-thomas-desson-COMPLET.backup.html
+photos: logos/
+wetransfer_*/
+ABF0F248-*.PNG
+B78E4482-*.PNG
+6C4F578A-*.MOV
+
+# On garde uniquement : index.html + assets/

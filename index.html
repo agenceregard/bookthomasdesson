@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas Desson, Broadcaster TV · Speaker · Maître de cérémonie</title>
+<meta name="description" content="Thomas Desson, Broadcaster TV, Speaker & Maître de cérémonie. Présentation, commentaire et direct (RMC, UFC) ; animation et présentation d'événements (Hexagone MMA).">
+<meta name="author" content="Thomas Desson">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#E8001D">
+<!-- Partage social (Open Graph / Twitter). Image : assets/og-cover.jpg (1200×630). Au déploiement : passer og:image + og:url en URL ABSOLUES (https://…) + ajouter <link rel="canonical">. -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Thomas Desson">
+<meta property="og:title" content="Thomas Desson, Broadcaster TV · Speaker · Maître de cérémonie">
+<meta property="og:description" content="Thomas Desson, Broadcaster TV, Speaker & Maître de cérémonie. Présentation, commentaire et direct (RMC, UFC) ; animation et présentation d'événements (Hexagone MMA).">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Thomas Desson, Broadcaster TV · Speaker &amp; Maître de cérémonie">
+<meta name="twitter:image" content="assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thomas Desson, Broadcaster TV · Speaker · Maître de cérémonie">
+<meta name="twitter:description" content="Thomas Desson, Broadcaster TV, Speaker & Maître de cérémonie. Présentation, commentaire et direct (RMC, UFC) ; animation et présentation d'événements (Hexagone MMA).">
+<!-- Favicon inline (DA regard.), évite le 404, aucun asset externe requis. -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0A0A'/><text x='6.5' y='23.5' font-family='Outfit,Arial,sans-serif' font-weight='900' font-size='22' fill='%23F0EEEA'>T</text><circle cx='24.5' cy='22.5' r='3' fill='%23E8001D'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BOOK THOMAS DESSON, Direction artistique regard.
+   Feuille de styles partagée (accueil + 2 pages prestations)
+   ------------------------------------------------------------
+   DA regard. :
+   • Logo  : Outfit 900, rouge #E8001D, point . en #8B0000, minuscules
+   • Type  : Outfit (300–900) + DM Mono (labels, numéros)
+   • Fonds : blanc #FFFFFF / crème #F0EEEA, noir #0A0A0A en registre
+   • Esprit: minimaliste, premium, sportif, chaque élément a une fonction
+   ============================================================ */
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rouge:#E8001D;
+  --rouge-sombre:#8B0000;
+  --rouge-live:#C7202F;
+  --noir:#0A0A0A;
+  --noir-2:#141414;
+  --blanc:#FFFFFF;
+  --creme:#F0EEEA;
+  --gris:#8A8A85;
+  --gris-l:#E2E0DC;
+  --gris-d:#555;
+
+  --serif:'Outfit',system-ui,sans-serif; /* la DA regard est 100% Outfit */
+  --sans:'Outfit',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+
+  /* variables de thème (surchargées par page) */
+  --bg:var(--blanc);
+  --panel:var(--creme);
+  --text:var(--noir);
+  --muted:rgba(10,10,10,.6);
+  --line:rgba(10,10,10,.12);
+  --accent:var(--rouge);
+}
+
+/* ---- THÈMES DE PAGE ---- */
+.page-cover{--bg:var(--blanc);--panel:var(--creme);--text:var(--noir);--muted:rgba(10,10,10,.58);--line:rgba(10,10,10,.12);--accent:var(--rouge)}
+.page-tv{--bg:var(--noir);--panel:#161616;--text:#F4F2EE;--muted:rgba(244,242,238,.58);--line:rgba(255,255,255,.12);--accent:var(--rouge)}
+.page-speaker{--bg:var(--blanc);--panel:var(--creme);--text:var(--noir);--muted:rgba(10,10,10,.58);--line:rgba(10,10,10,.12);--accent:var(--rouge)}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .5s var(--ease)}
+body.no-scroll{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--rouge);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ---- WORDMARKS ---- */
+.regard{font-family:var(--serif);font-weight:900;letter-spacing:-.06em;color:var(--rouge);line-height:1}
+.regard .dot{color:var(--rouge-sombre)}
+.regard--white{color:var(--blanc)}
+.regard--white .dot{color:rgba(255,255,255,.5)}
+.wordmark{font-family:var(--serif);font-weight:900;letter-spacing:-.045em;line-height:1}
+.wordmark .dot{color:var(--rouge)}
+
+/* ---- LAYOUT ---- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(22px,5vw,60px)}
+.section{padding:clamp(64px,9vw,120px) 0}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:12px;color:var(--rouge)}
+.eyebrow::before{content:'';width:26px;height:2px;background:var(--rouge)}
+.h-title{font-family:var(--serif);font-weight:900;line-height:1;letter-spacing:-.04em;
+  font-size:clamp(2rem,5.4vw,4rem);text-transform:none}
+.h-title .thin{font-weight:300}
+.lead{font-size:clamp(1rem,1.4vw,1.16rem);font-weight:300;max-width:60ch;color:var(--muted)}
+.section-head{max-width:760px;margin-bottom:clamp(32px,5vw,56px)}
+.section-head .h-title{margin:16px 0 0}
+.section-head .lead{margin-top:16px}
+
+/* ---- BOUTONS ---- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.86rem;
+  padding:15px 26px;border-radius:2px;transition:.4s var(--ease)}
+.btn .arw{transition:transform .4s var(--ease)}
+.btn:hover .arw{transform:translateX(5px)}
+.btn-red{background:var(--rouge);color:#fff}
+.btn-red:hover{background:var(--rouge-sombre);transform:translateY(-2px)}
+.btn-dark{background:var(--noir);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-line{border:1.5px solid currentColor}
+.btn-line:hover{background:var(--rouge);border-color:var(--rouge);color:#fff}
+
+/* ---- REVEAL ---- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;
+  justify-content:space-between;padding:18px clamp(22px,5vw,60px);transition:.45s var(--ease)}
+.nav .brand{display:flex;align-items:baseline;gap:2px;font-family:var(--serif);font-weight:900;
+  font-size:1.15rem;letter-spacing:-.045em}
+.nav .brand .dot{color:var(--rouge)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:.82rem;font-weight:600;opacity:.82;position:relative;transition:.3s}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--rouge);transition:width .3s var(--ease)}
+.nav-links a:hover{opacity:1}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:9px 18px;border-radius:40px;background:var(--rouge);color:#fff;font-size:.8rem;font-weight:700;transition:.35s}
+.nav-cta:hover{background:var(--rouge-sombre)}
+/* couleur du texte nav selon page (au sommet, fond transparent) */
+.page-tv .nav,.page-speaker .nav.on-hero{color:#fff}
+.page-speaker .nav.on-hero .brand .dot{color:#fff}
+.page-speaker .nav.on-hero .nav-cta{background:#fff;color:var(--rouge)}
+.page-speaker .nav.on-hero .nav-cta:hover{background:var(--noir);color:#fff}
+.nav.scrolled{backdrop-filter:blur(14px);padding-top:12px;padding-bottom:12px}
+.page-cover .nav.scrolled,.page-speaker .nav.scrolled{background:rgba(255,255,255,.9);color:var(--noir);box-shadow:0 1px 0 var(--line)}
+.page-tv .nav.scrolled{background:rgba(10,10,10,.85);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.burger{display:none;flex-direction:column;gap:5px;width:30px;height:22px;justify-content:center}
+.burger span{height:2px;width:100%;background:currentColor;transition:.35s var(--ease)}
+body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:110;background:var(--noir);color:#fff;display:flex;
+  flex-direction:column;justify-content:center;gap:4px;padding:0 32px;transform:translateY(-100%);transition:transform .5s var(--ease)}
+body.menu-open .mobile-menu{transform:none}
+.mobile-menu a{font-family:var(--serif);font-weight:800;font-size:1.9rem;letter-spacing:-.03em;padding:8px 0}
+.mobile-menu a .dot{color:var(--rouge)}
+.mobile-menu .mm-label{font-family:var(--mono);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;opacity:.4;margin-top:22px}
+
+/* ============================================================
+   PAGE DE GARDE (accueil)
+   ============================================================ */
+.cover-hero{position:relative;min-height:auto;display:flex;flex-direction:column;justify-content:center;
+  padding:104px 0 46px;background:
+    radial-gradient(60% 50% at 85% 15%,rgba(232,0,29,.06),transparent 60%),
+    linear-gradient(180deg,var(--blanc),var(--creme))}
+.cover-hero__head{text-align:center;margin-bottom:clamp(24px,4vw,40px)}
+.cover-hero .kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--rouge);margin-bottom:14px;display:inline-block}
+.cover-hero__name{font-family:var(--serif);font-weight:900;letter-spacing:-.05em;line-height:.92;
+  font-size:clamp(2.5rem,8.4vw,6rem)}
+.cover-hero__name .dot{color:var(--rouge)}
+.cover-hero__tag{margin-top:12px;font-size:clamp(.9rem,1.7vw,1.12rem);font-weight:300;color:var(--muted)}
+.cover-hero__meta{margin-top:12px;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rouge)}
+.cover-hero__contact{margin-top:16px}
+.cover-hero__contact a{display:inline-block;font-family:var(--mono);font-size:.85rem;letter-spacing:.08em;font-weight:600;color:var(--noir);border-bottom:2px solid var(--rouge);padding-bottom:3px;transition:.3s}
+.cover-hero__contact a:hover{color:var(--rouge)}
+/* deux cartes d'entrée */
+.entries{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.entry{position:relative;overflow:hidden;border-radius:5px;padding:clamp(22px,2.8vw,36px);min-height:clamp(228px,27vw,286px);
+  display:flex;flex-direction:column;justify-content:flex-end;transition:.5s var(--ease)}
+.entry--tv{background:var(--noir);color:#F4F2EE}
+.entry--sp{background:var(--rouge);color:#fff}
+.entry:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.entry__num{font-family:var(--mono);font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;opacity:.55;margin-bottom:auto}
+.entry__glow{position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(70px);opacity:.4;pointer-events:none}
+.entry--tv .entry__glow{background:var(--rouge);top:-70px;right:-60px}
+.entry--sp .entry__glow{background:#fff;opacity:.18;bottom:-70px;left:-60px}
+.entry h2{position:relative;font-family:var(--serif);font-weight:900;letter-spacing:-.04em;line-height:1;
+  font-size:clamp(1.7rem,3.2vw,2.6rem);margin:14px 0 8px}
+.entry p{position:relative;font-size:.9rem;font-weight:300;opacity:.8;margin-bottom:22px}
+.entry__cta{position:relative;display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.88rem;
+  padding:13px 22px;border-radius:2px;align-self:flex-start;transition:.4s var(--ease)}
+.entry--tv .entry__cta{background:var(--rouge);color:#fff}
+.entry--tv .entry__cta:hover{background:#fff;color:var(--noir)}
+.entry--sp .entry__cta{background:#fff;color:var(--rouge)}
+.entry--sp .entry__cta:hover{background:var(--noir);color:#fff}
+.entry__cta .arw{transition:transform .4s var(--ease)}
+.entry:hover .entry__cta .arw{transform:translateX(5px)}
+.cover-scroll{text-align:center;margin-top:26px;font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* ============================================================
+   HERO UNIVERS (pages prestations)
+   ============================================================ */
+.uni-hero{position:relative;padding:clamp(130px,20vh,210px) 0 clamp(50px,7vw,84px);overflow:hidden}
+.page-tv .uni-hero{background:radial-gradient(70% 90% at 82% 0%,rgba(232,0,29,.14),transparent 55%),var(--noir)}
+.page-speaker .uni-hero{background:var(--rouge);color:#fff}
+.page-speaker .uni-hero .eyebrow{color:#fff}
+.page-speaker .uni-hero .eyebrow::before{background:#fff}
+.page-speaker .uni-hero .lead{color:rgba(255,255,255,.82)}
+.uni-hero__inner{position:relative;z-index:2;max-width:840px}
+.uni-hero .h-title{margin:18px 0}
+.uni-hero .lead{margin-bottom:30px}
+.page-speaker .uni-hero .btn-red{background:#fff;color:var(--rouge)}
+.page-speaker .uni-hero .btn-red:hover{background:var(--noir);color:#fff}
+.hero-mark{position:absolute;right:-2%;bottom:-8%;font-family:var(--serif);font-weight:900;
+  font-size:clamp(10rem,26vw,26rem);letter-spacing:-.07em;line-height:1;opacity:.05;pointer-events:none;z-index:1}
+.page-speaker .hero-mark{color:#fff;opacity:.1}
+
+/* ============================================================
+   CARTES PRESTATIONS
+   ============================================================ */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{position:relative;padding:26px 24px 28px;border-radius:4px;overflow:hidden;
+  border:1px solid var(--line);background:var(--panel);transition:.45s var(--ease)}
+.card::before{content:'';position:absolute;left:0;top:0;height:3px;width:0;background:var(--rouge);transition:width .5s var(--ease)}
+.card:hover{transform:translateY(-6px);border-color:rgba(232,0,29,.4)}
+.card:hover::before{width:100%}
+.card__ico{width:44px;height:44px;display:grid;place-items:center;border-radius:8px;margin-bottom:18px;
+  background:rgba(232,0,29,.1);color:var(--rouge)}
+.card__ico svg{width:22px;height:22px}
+.card h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.card p{font-size:.84rem;font-weight:300;color:var(--muted);line-height:1.6}
+
+/* ============================================================
+   EXPÉRIENCE
+   ============================================================ */
+.exp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(26px,4vw,54px);align-items:start}
+.exp-row{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.exp-row:last-child{border-bottom:1px solid var(--line)}
+.exp-row .yr{font-family:var(--mono);font-size:.78rem;color:var(--rouge)}
+.exp-row h4{font-size:1rem;font-weight:700}
+.exp-row p{font-size:.83rem;font-weight:300;color:var(--muted)}
+.exp-side{padding:28px;border-radius:6px;border:1px solid var(--line);background:var(--panel)}
+.exp-side .mini-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rouge);margin-bottom:14px}
+
+/* ============================================================
+   BANDE DÉMO
+   ============================================================ */
+/* BANDE DÉMO, extraits vidéo + contexte */
+.reels{display:grid;gap:clamp(24px,3.6vw,44px)}
+.reel{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(16px,3vw,38px);align-items:center;
+  padding-bottom:clamp(24px,3.6vw,44px);border-bottom:1px solid var(--line)}
+.reel:last-child{border-bottom:none;padding-bottom:0}
+.reel__media{border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#000;line-height:0;display:flex;justify-content:center}
+.reel__media video{width:100%;height:auto;aspect-ratio:640/352;display:block;background:#000;cursor:pointer}
+.reel__ctx .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rouge);display:block;margin-bottom:12px}
+.reel__ctx h3{font-family:var(--serif);font-weight:800;letter-spacing:-.02em;font-size:clamp(1.12rem,1.9vw,1.45rem);line-height:1.16;margin-bottom:10px}
+.reel__ctx p{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.65;margin-bottom:16px}
+.reel__tag{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:40px;padding:8px 14px}
+.reel__tag b{color:var(--text);font-weight:600;letter-spacing:.04em}
+@media(max-width:820px){ .reel{grid-template-columns:1fr;gap:14px;align-items:start} }
+
+/* ============================================================
+   GALERIE + LIGHTBOX
+   ============================================================ */
+.gallery{columns:3;column-gap:14px}
+.gallery .ph{break-inside:avoid;margin-bottom:14px;border-radius:5px;overflow:hidden;position:relative;cursor:pointer}
+.gallery .ph img,.gallery .ph .ph-fill{width:100%;transition:transform .7s var(--ease)}
+.gallery .ph img{height:auto}
+.gallery .ph:hover img,.gallery .ph:hover .ph-fill{transform:scale(1.05)}
+.ph-fill{display:grid;place-items:center;text-align:center;padding:26px 16px;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted);background:var(--panel);border:1px solid var(--line)}
+.ph-a1{aspect-ratio:3/4}.ph-a2{aspect-ratio:1/1}.ph-a3{aspect-ratio:4/5}.ph-a4{aspect-ratio:16/10}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(10,10,10,.94);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;padding:5vw;opacity:0;pointer-events:none;transition:opacity .4s;color:#fff}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox__inner{max-width:900px;width:100%;text-align:center}
+.lightbox__frame{border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.15)}
+.lightbox__frame img{width:100%}
+.lightbox__cap{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;opacity:.7;margin-top:14px}
+.lightbox__close{position:absolute;top:24px;right:28px;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);border-radius:50%;font-size:1.2rem;color:#fff}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:1px solid rgba(255,255,255,.3);border-radius:50%;font-size:1.3rem;display:grid;place-items:center;color:#fff}
+.lightbox__nav.prev{left:3vw}.lightbox__nav.next{right:3vw}
+
+/* ============================================================
+   COMPÉTENCES / APPORTS
+   ============================================================ */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.skill{padding:20px;border-radius:5px;border:1px solid var(--line);background:var(--panel);transition:.4s var(--ease)}
+.skill:hover{transform:translateY(-4px);border-color:rgba(232,0,29,.4)}
+.skill .sk-n{font-family:var(--mono);font-size:.66rem;color:var(--rouge);margin-bottom:8px}
+.skill h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
+.skill p{font-size:.8rem;font-weight:300;color:var(--muted)}
+
+/* ÉTAPES */
+.steps{display:grid;gap:0}
+.step-item{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 4px;border-top:1px solid var(--line);align-items:baseline}
+.step-item:last-child{border-bottom:1px solid var(--line)}
+.step-item .num{font-family:var(--serif);font-size:1.7rem;font-weight:900;color:var(--rouge);min-width:44px;letter-spacing:-.04em}
+.step-item h4{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.step-item p{font-size:.85rem;font-weight:300;color:var(--muted)}
+
+/* ============================================================
+   CHIFFRES
+   ============================================================ */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{padding:30px 20px;text-align:center;border-radius:6px;border:1px solid var(--line);background:var(--panel)}
+.stat__num{font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--rouge);letter-spacing:-.04em}
+.stat__num .todo{font-size:.95rem;font-family:var(--mono);color:var(--muted);letter-spacing:0}
+.stat__lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* LOGOS */
+.logos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,60px)}
+.cta-pair{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+.contact-lines{display:flex;flex-direction:column;margin-top:18px}
+.c-line{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.c-line svg{width:18px;height:18px;color:var(--rouge);flex-shrink:0}
+.c-line .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);min-width:76px}
+.c-line a,.c-line span{font-size:.92rem}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:clamp(24px,4vw,40px)}
+.form h3{font-family:var(--serif);font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.form .form-note{font-size:.8rem;color:var(--muted);margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:4px;
+  padding:13px 14px;color:var(--text);font-family:inherit;font-size:.9rem;transition:.3s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rouge);outline:none}
+.field textarea{resize:vertical;min-height:110px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.segmented{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.seg{flex:1;min-width:120px;text-align:center;padding:12px;border-radius:4px;border:1px solid var(--line);font-size:.82rem;font-weight:700;transition:.3s}
+.seg.active{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.form-submit{width:100%;margin-top:6px;padding:16px;border-radius:4px;font-weight:800;font-size:.95rem;background:var(--rouge);color:#fff;transition:.35s}
+.form-submit:hover{background:var(--rouge-sombre)}
+.form-ok{display:none;margin-top:16px;padding:14px;border-radius:4px;background:rgba(232,0,29,.08);border:1px solid rgba(232,0,29,.35);font-size:.85rem;text-align:center}
+.form-ok.show{display:block}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:transparent;color:var(--muted);padding:clamp(30px,4vw,46px) 0;border-top:1px solid var(--line)}
+.footer-credit{font-family:var(--mono);letter-spacing:.06em;display:inline-flex;align-items:baseline;gap:6px}
+.footer-credit .regard{font-size:1rem}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:980px){
+  .exp-grid,.demo,.contact-grid{grid-template-columns:1fr}
+  .gallery{columns:2}
+  .demo-side{grid-template-rows:none;grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .entries{grid-template-columns:1fr}
+  .entry{min-height:280px}
+}
+@media(max-width:560px){
+  .gallery{columns:1}
+  .field-row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ============================================================
+   BILINGUE FR / EN
+   ============================================================ */
+span[lang]{}                                   /* conteneurs de langue inline */
+body:not(.lang-en) span[lang="en"]{display:none}
+body.lang-en span[lang="fr"]{display:none}
+
+.lang-switch{display:inline-flex;border:1px solid currentColor;border-radius:40px;overflow:hidden;opacity:.85;transition:.3s}
+.lang-switch:hover{opacity:1}
+.lang-switch button{padding:7px 12px;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;font-weight:600;color:inherit;transition:.3s}
+.lang-switch button.active{background:var(--rouge);color:#fff}
+.page-speaker .nav.on-hero .lang-switch button.active{background:#fff;color:var(--rouge)}
+@media(max-width:760px){ .nav .lang-switch{margin-left:auto;margin-right:10px} }
+
+/* ---- Vue unique (single-file) ---- */
+.view{display:none}
+.view.active{display:block}
+
+/* ============================================================
+   RAFFINEMENT ÉDITORIAL PREMIUM, respiration, hiérarchie,
+   compositions, animations plus douces. (Aucun contenu retiré.)
+   ============================================================ */
+
+/* 1 · RESPIRATION, plus d'air vertical entre les sujets */
+.section{padding:clamp(88px,12vw,172px) 0}
+.section-head{max-width:720px;margin-bottom:clamp(46px,6.5vw,90px)}
+.section-head .h-title{margin-top:20px}
+.section-head .lead{margin-top:20px}
+
+/* 2 · HIÉRARCHIE & LISIBILITÉ, niveaux de lecture plus nets */
+body{line-height:1.68}
+.eyebrow{letter-spacing:.34em;font-size:.68rem}
+.h-title{letter-spacing:-.045em}
+.lead{max-width:58ch;line-height:1.75;font-size:clamp(1.02rem,1.45vw,1.2rem)}
+.card p,.skill p,.exp-row p,.step-item p,.demo-mini h4,.reel__ctx p{line-height:1.72}
+.card h3{font-size:1.08rem;margin-bottom:10px}
+.skill h4{font-size:1.02rem;margin-bottom:8px}
+
+/* 3 · MOINS DE « PETITES CASES », cards & tuiles plus grandes et aérées */
+.cards{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(16px,1.7vw,24px)}
+.card{padding:clamp(28px,2.4vw,36px) clamp(26px,2.2vw,32px);border-radius:7px}
+.card__ico{margin-bottom:22px}
+.skills{grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:clamp(14px,1.5vw,22px)}
+.skill{padding:clamp(24px,2vw,30px);border-radius:7px}
+.formats{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(16px,1.7vw,24px)}
+.format{min-height:248px}
+.stats{grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:clamp(16px,1.7vw,24px)}
+.stat{padding:clamp(38px,3.4vw,52px) 26px;border-radius:9px}
+.exp-row{padding:26px 0}
+.step-item{padding:28px 4px}
+.logos-grid{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:clamp(14px,1.5vw,20px)}
+
+/* 4 · ANIMATIONS PLUS DOUCES, accompagnent la lecture, sans cascade marquée */
+.reveal{transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.d1{transition-delay:.04s}.reveal.d2{transition-delay:.08s}
+.reveal.d3{transition-delay:.12s}.reveal.d4{transition-delay:.16s}
+.card:hover{transform:translateY(-4px)}
+.skill:hover{transform:translateY(-3px)}
+.format:hover{transform:translateY(-4px)}
+.demo-mini:hover{transform:translateX(3px)}
+
+/* 5 · GALERIES & VIDÉOS, plus d'air dans la mosaïque */
+.gallery{column-gap:clamp(14px,1.6vw,20px)}
+.gallery .ph{margin-bottom:clamp(14px,1.6vw,20px)}
+
+/* 6 · RYTHME DE COMPOSITION, alterne vidéo/contexte gauche-droite (desktop) */
+@media(min-width:861px){
+  .reel:nth-child(even){grid-template-columns:1fr 1.55fr}
+  .reel:nth-child(even) .reel__media{order:2}
+}
+
+/* 8 · MOBILE, même philosophie, on garde l'air sans sur-allonger */
+@media(max-width:760px){
+  .section{padding:clamp(64px,15vw,96px) 0}
+  .section-head{margin-bottom:clamp(34px,9vw,52px)}
+  .cards,.formats{grid-template-columns:1fr}
+}
+
+/* 2b · « VOIR PLUS », divulgation progressive sur les grilles denses (contenu conservé) */
+.card.is-collapsed,.skill.is-collapsed{display:none}
+.more-toggle{display:inline-flex;align-items:center;gap:10px;margin:clamp(26px,3vw,42px) auto 0;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);
+  border:1px solid var(--line);border-radius:40px;padding:14px 28px;transition:.35s var(--ease)}
+.more-toggle::after{content:'↓';font-size:.9em;transition:transform .35s var(--ease)}
+.more-toggle.open::after{transform:rotate(180deg)}
+.more-toggle:hover{border-color:var(--rouge);color:var(--rouge)}
+.more-wrap{display:flex;justify-content:center}
+
+/* 5b · STATEMENT pleine largeur, grande respiration éditoriale (phrases déjà présentes dans le book) */
+.statement{padding:clamp(84px,11vw,156px) 0;background:var(--noir);color:#F4F2EE;text-align:center}
+.statement .wrap{max-width:940px}
+.statement__q{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,4.2vw,3.3rem);line-height:1.16;letter-spacing:-.025em;max-width:22ch;margin:0 auto}
+.statement__by{font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rouge);margin-top:clamp(24px,3vw,40px)}
+
+/* 5c · CHIFFRES en composition éditoriale, un repère phare + les autres en soutien */
+.stats--featured{grid-template-columns:1.05fr 1.5fr;align-items:stretch;gap:clamp(16px,1.7vw,24px)}
+.stat--hero{display:flex;flex-direction:column;justify-content:center;text-align:left;padding:clamp(40px,4vw,58px)}
+.stat--hero .stat__num{font-size:clamp(3.6rem,8vw,6.2rem)}
+.stat--hero .stat__lbl{margin-top:18px}
+.stats__rest{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.5vw,22px)}
+@media(max-width:760px){ .stats--featured{grid-template-columns:1fr} .stat--hero{text-align:center;padding:36px} .stats__rest{grid-template-columns:1fr 1fr} }
+
+/* 5d · MUR DE LOGOS, références détourées, sans encadré (fond blanc retiré) */
+#references .logos-grid{grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,30px);max-width:920px;margin-inline:auto}
+.logo{display:grid;place-items:center;padding:clamp(8px,1.5vw,20px)}
+.logo img{width:100%;max-width:clamp(190px,23vw,262px);height:auto;opacity:.92;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.logo:hover img{opacity:1;transform:scale(1.05)}
+@media(max-width:640px){ #references .logos-grid{grid-template-columns:repeat(2,1fr);gap:10px} }
+
+/* 5e · FOOTER MINIMAL, juste la mention légale + confidentiel + signature regard. */
+.footer-mini{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:12px 16px;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:var(--muted);text-align:center}
+.footer-mini .footer-credit{color:var(--muted)}
+.footer-sep{opacity:.45}
+
+/* 5f · REPÈRES, bloc latéral « En quelques repères » (typo & mise en page revues) */
+.exp-side .mini-label{display:flex;align-items:center;gap:12px;font-size:.64rem;letter-spacing:.28em}
+.exp-side .mini-label::before{content:'';width:20px;height:2px;background:var(--rouge);flex:0 0 auto}
+.reperes{margin:8px 0 0}
+.reperes li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);
+  font-size:.98rem;font-weight:400;line-height:1.5;color:var(--text)}
+.reperes li:first-child{border-top:none;padding-top:6px}
+.reperes li::before{content:'';flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--rouge);margin-top:.5em}
+.reperes-medias{display:flex;flex-wrap:wrap;align-items:baseline;margin-top:14px;font-size:1rem;font-weight:600;line-height:1.5;letter-spacing:.005em;color:var(--text)}
+.reperes-medias span:not(:last-child)::after{content:'·';color:var(--rouge);margin:0 11px;font-weight:700}
+
+</style>
+</head>
+<body class="page-cover">
+<header class="nav" id="nav">
+  <a href="#" class="brand" data-view="home" aria-label="Thomas Desson, accueil">Thomas&nbsp;Desson<span class="dot">.</span></a>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#" data-view="home" class="nl active"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+    <a href="#" data-view="tv" class="nl">Broadcaster TV</a>
+    <a href="#" data-view="speaker" class="nl">Speaker</a>
+    <a href="#" data-view="home" data-scroll="references" class="nl"><span lang="fr">Références</span><span lang="en">References</span></a>
+  </nav>
+  <a href="#" data-view="home" data-scroll="contact" class="nav-cta">Contact</a>
+  <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="fr" class="active">FR</button><button type="button" data-lang="en">EN</button></div>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+  <span class="mm-label"><span lang="fr">Univers</span><span lang="en">Worlds</span></span>
+  <a href="#" data-view="tv" data-close>Broadcaster TV<span class="dot">.</span></a>
+  <a href="#" data-view="speaker" data-close>Speaker<span class="dot">.</span></a>
+  <span class="mm-label"><span lang="fr">Le book</span><span lang="en">The book</span></span>
+  <a href="#" data-view="home" data-scroll="about" data-close><span lang="fr">À propos</span><span lang="en">About</span></a>
+  <a href="#" data-view="home" data-scroll="references" data-close><span lang="fr">Références</span><span lang="en">References</span></a>
+  <a href="#" data-view="home" data-scroll="contact" data-close>Contact</a>
+</nav>
+<div class="view active" data-view="home"><main>
+<section class="cover-hero">
+  <div class="wrap">
+    <div class="cover-hero__head">
+      <span class="kicker"><span lang="fr">Broadcaster TV · Speaker &amp; Maître de cérémonie</span><span lang="en">TV Broadcaster · Speaker &amp; Master of Ceremonies</span></span>
+      <h1 class="cover-hero__name">Thomas Desson<span class="dot">.</span></h1>
+      <figure class="cover-portrait reveal"><img src="assets/sp-gal-07.jpg" width="1200" height="800" alt="Thomas Desson, micro Hexagone MMA, en conférence de presse" loading="eager"></figure>
+      <p class="cover-hero__tag"><span lang="fr">Deux métiers, une même maîtrise du direct. J'interviens aussi bien devant les caméras qu'au cœur des événements, donner du rythme, transmettre une émotion et créer un lien avec le public.</span><span lang="en">Two professions, one mastery of live. I work both in front of the cameras and at the heart of events, to bring rhythm, convey emotion and create a bond with the audience.</span></p>
+    </div>
+
+    <!-- Deux entrées → deux pages de prestations -->
+    <div class="entries">
+      <a href="#" data-view="tv" class="entry entry--tv reveal">
+        <span class="entry__glow" aria-hidden="true"></span>
+        <span class="entry__num"><span lang="fr">Univers 01</span><span lang="en">World 01</span></span>
+        <h2>Broadcaster TV</h2>
+        <p><span lang="fr">Présentation · Commentaire · Journalisme · Interviews</span><span lang="en">Presenting · Commentary · Journalism · Interviews</span></p>
+        <span class="entry__cta"><span lang="fr">Découvrir l'univers TV</span><span lang="en">Explore the TV world</span> <span class="arw" aria-hidden="true">→</span></span>
+      </a>
+      <a href="#" data-view="speaker" class="entry entry--sp reveal d1">
+        <span class="entry__glow" aria-hidden="true"></span>
+        <span class="entry__num"><span lang="fr">Univers 02</span><span lang="en">World 02</span></span>
+        <h2><span lang="fr">Speaker &amp; Maître de cérémonie</span><span lang="en">Speaker &amp; Master of Ceremonies</span></h2>
+        <p><span lang="fr">Événements sportifs · Galas · Scène · Animation</span><span lang="en">Sports events · Galas · Stage · Hosting</span></p>
+        <span class="entry__cta"><span lang="fr">Découvrir l'univers Speaker</span><span lang="en">Explore the Speaker world</span> <span class="arw" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+    <p class="cover-scroll"><span lang="fr">Choisissez un univers · ou faites défiler</span><span lang="en">Choose a world · or scroll</span></p>
+  </div>
+</section>
+
+<!-- ═══════════ À PROPOS ═══════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">À propos</span><span lang="en">About</span></span>
+      <h2 class="h-title"><span lang="fr">Deux métiers,</span><span lang="en">Two professions,</span><br><span class="thin"><span lang="fr">une même exigence du direct.</span><span lang="en">one same demand for live.</span></span></h2>
+    </div>
+    <!-- DATA-ABOUT : texte provisoire à réécrire avec le vrai parcours. Ne rien inventer. -->
+    <div class="about-grid reveal d1">
+     <div>
+      <p class="lead" style="margin-bottom:16px"><span lang="fr">Journaliste-présentateur <strong style="color:var(--noir);font-weight:600">international</strong>, je cumule plus de 20 ans d'expérience dans la couverture d'événements sportifs. Formé en Californie (San Diego, Los Angeles, Fox Sports World) et en Espagne (Eurosport Madrid), je suis parfaitement bilingue français / anglais.</span><span lang="en">An <strong style="color:var(--noir);font-weight:600">international</strong> journalist-presenter, I have 20+ years of experience covering sporting events. Trained in California (San Diego, Los Angeles, Fox Sports World) and Spain (Eurosport Madrid), I'm fully bilingual English / French.</span></p>
+      <p class="lead" style="margin-bottom:16px"><span lang="fr">Fort d'un solide parcours en sports de combat, en football, en rugby, en boxe et sur les grands événements internationaux, je suis aussi à l'aise en plateau que sur scène. Titulaire d'un Master en PNL (programmation neuro-linguistique), je place l'intelligence émotionnelle au cœur de mon approche.</span><span lang="en">With a strong track record in combat sports, football, rugby, boxing and hosting global events, I'm as comfortable in the studio as on stage. Holding a Master's in NLP (Neuro-Linguistic Programming), I put emotional intelligence at the heart of my craft.</span></p>
+      <p class="lead" style="margin-bottom:16px"><span lang="fr">J'ai collaboré avec les plus grands médias sportifs, Fox Sports World, Eurosport, Canal+, W9, beIN Sports et RMC Sport, sur le football, le rugby, la boxe, les sports US et le MMA. Aujourd'hui, je commente les combats de l'UFC et la Premier League sur RMC Sport et je suis le speaker officiel de la ligue Hexagone MMA.</span><span lang="en">I have worked with the biggest sports media, Fox Sports World, Eurosport, Canal+, W9, beIN Sports and RMC Sport, across football, rugby, boxing, US sports and MMA. Today I commentate UFC fights and the Premier League on RMC Sport and I'm the official speaker for the Hexagone MMA league.</span></p>
+      <p class="lead"><span lang="fr">Au-delà de l'antenne et de la scène, j'accompagne dirigeants et porte-parole en media training et prise de parole en public.</span><span lang="en">Beyond broadcasting and the stage, I coach executives and spokespeople in media training and public speaking.</span></p>
+     </div>
+     <figure class="about-portrait">
+       <img src="assets/sp-portrait-micro.jpg" width="867" height="1280" alt="Thomas Desson, micro Hexagone MMA, en tant que speaker" loading="lazy">
+       <figcaption><span lang="fr">Speaker officiel, Hexagone MMA</span><span lang="en">Official speaker, Hexagone MMA</span></figcaption>
+     </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CHIFFRES ═══════════ -->
+<section class="section" style="background:var(--creme)" id="chiffres">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center"><span lang="fr">En chiffres</span><span lang="en">In numbers</span></span>
+      <h2 class="h-title"><span lang="fr">Quelques repères</span><span lang="en">A few markers</span></h2>
+    </div>
+    <!-- DATA-STATS : mettez le vrai chiffre dans data-target. Vide = placeholder conservé (aucun faux chiffre). -->
+    <div class="stats stats--featured">
+      <div class="stat stat--hero reveal"><div class="stat__num">20+</div><div class="stat__lbl"><span lang="fr">Années d'expérience dans les médias</span><span lang="en">Years of experience in media</span></div></div>
+      <div class="stats__rest">
+        <div class="stat reveal d1"><div class="stat__num">4&nbsp;800+</div><div class="stat__lbl"><span lang="fr">Heures de direct</span><span lang="en">Hours on air</span></div></div>
+        <div class="stat reveal d2"><div class="stat__num">2&nbsp;400+</div><div class="stat__lbl"><span lang="fr">Événements présentés, commentés ou animés</span><span lang="en">Events hosted, commentated or MC'd</span></div></div>
+        <div class="stat reveal d3"><div class="stat__num">600+</div><div class="stat__lbl">Interviews</div></div>
+        <div class="stat reveal d4"><div class="stat__num">9</div><div class="stat__lbl"><span lang="fr">Coupes du monde couvertes</span><span lang="en">World Cups covered</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ARÈNES / SPECTATEURS ═══════════ -->
+<style>
+  .arena-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.5vw,22px);margin-top:clamp(34px,4vw,54px)}
+  @media(max-width:900px){.arena-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.arena-grid{grid-template-columns:1fr}}
+  .arena-card{position:relative;padding:clamp(28px,2.6vw,38px) clamp(22px,2vw,28px);border-radius:9px;border:1px solid rgba(255,255,255,.14);background:var(--noir-2);overflow:hidden;transition:transform .5s var(--ease),border-color .5s var(--ease)}
+  .arena-card::before{content:'';position:absolute;left:0;top:0;height:3px;width:0;background:var(--rouge);transition:width .5s var(--ease)}
+  .arena-card:hover{transform:translateY(-6px);border-color:rgba(232,0,29,.5)}
+  .arena-card:hover::before{width:100%}
+  .arena-card__role{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rouge)}
+  .arena-card__num{font-family:var(--serif);font-weight:900;font-size:clamp(2.5rem,4.8vw,3.4rem);line-height:1;letter-spacing:-.04em;color:#fff;margin-top:22px}
+  .arena-card__num span{color:var(--rouge)}
+  .arena-card__unit{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:12px}
+  .arena-card__ctx{font-size:.86rem;font-weight:300;line-height:1.55;color:rgba(255,255,255,.72);margin-top:16px}
+  .arena-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:clamp(30px,3.4vw,46px)}
+  .arena-pill{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:9px 16px}
+  .arena-pill strong{color:var(--rouge);font-weight:700}
+  .arena-expertises{text-align:center;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:clamp(24px,2.6vw,34px)}
+  .arena-expertises strong{color:#fff;font-weight:700}
+  /* Compteurs + apparition renforcée */
+  .stat.reveal,.arena-card.reveal{transform:translateY(34px) scale(.96)}
+  .stat.reveal.in,.arena-card.reveal.in{transform:none}
+  .stat__num,.arena-card__num{will-change:transform}
+  @keyframes numPop{0%{transform:scale(.92)}55%{transform:scale(1.05)}100%{transform:scale(1)}}
+  .stat__num.counted,.arena-card__num.counted{animation:numPop .55s var(--ease)}
+  /* Hero, entrée animée en cascade */
+  @keyframes heroRise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .cover-hero .kicker{opacity:0;animation:heroRise .8s var(--ease) .10s forwards}
+  .cover-hero__name{opacity:0;animation:heroRise .9s var(--ease) .22s forwards}
+  .cover-hero__tag{opacity:0;animation:heroRise .9s var(--ease) .34s forwards}
+  .cover-scroll{opacity:0;animation:heroRise .8s var(--ease) .70s forwards}
+  @keyframes glowFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(14px,-18px) scale(1.1)}}
+  .entry__glow{animation:glowFloat 7s ease-in-out infinite}
+  .entry--sp .entry__glow{animation-duration:9s;animation-direction:reverse}
+  /* Logos références, apparition en cascade */
+  #references .logos-grid.reveal{opacity:1;transform:none}
+  #references .logos-grid .logo{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  #references .logos-grid.in .logo{opacity:1;transform:none}
+  #references .logos-grid.in .logo:nth-child(2){transition-delay:.07s}
+  #references .logos-grid.in .logo:nth-child(3){transition-delay:.14s}
+  #references .logos-grid.in .logo:nth-child(4){transition-delay:.21s}
+  #references .logos-grid.in .logo:nth-child(5){transition-delay:.28s}
+  #references .logos-grid.in .logo:nth-child(6){transition-delay:.35s}
+  /* Galerie, cascade */
+  .gallery .ph:nth-child(2){transition-delay:.06s}
+  .gallery .ph:nth-child(3){transition-delay:.12s}
+  .gallery .ph:nth-child(4){transition-delay:.18s}
+  .gallery .ph:nth-child(5){transition-delay:.24s}
+  .gallery .ph:nth-child(6){transition-delay:.30s}
+  @media(prefers-reduced-motion: reduce){
+    .cover-hero .kicker,.cover-hero__name,.cover-hero__tag,.cover-scroll{animation:none;opacity:1}
+    .entry__glow{animation:none}
+  }
+  /* Portrait hero */
+  .cover-portrait{margin:clamp(22px,3vw,36px) auto 0;width:clamp(320px,58vw,620px);border-radius:16px;overflow:hidden;box-shadow:0 34px 66px -30px rgba(0,0,0,.5);border:1px solid var(--line);opacity:0;animation:heroRise .9s var(--ease) .46s forwards}
+  .cover-portrait img{display:block;width:100%;height:auto}
+  @media(prefers-reduced-motion: reduce){ .cover-portrait{animation:none;opacity:1} }
+  /* Bandeau haut de page (image forte pleine largeur) */
+  .topshot{position:relative;width:100%;line-height:0;overflow:hidden}
+  .topshot img{display:block;width:100%;height:auto;max-height:78vh;object-fit:cover;object-position:center 28%}
+  .topshot figcaption{position:absolute;left:0;right:0;bottom:0;line-height:1.4;padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px) clamp(18px,2.4vw,30px);font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,0))}
+  .topshot figcaption b{color:var(--rouge);font-weight:700}
+  /* Variante cadrée (portrait basse-déf : on n'agrandit jamais au-delà du natif) */
+  .topshot--card{width:min(90%,520px);margin:clamp(26px,4vw,54px) auto 0;border-radius:16px;box-shadow:0 34px 70px -34px rgba(0,0,0,.55);border:1px solid var(--line)}
+  .topshot--card img{max-height:none;object-fit:contain}
+  .topshot--card figcaption{padding:clamp(30px,5vw,52px) clamp(18px,3vw,24px) clamp(14px,2vw,18px)}
+  .topshot--wide{width:min(92%,880px)}
+  /* À propos, texte + portrait */
+  .about-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(28px,4vw,56px);align-items:start}
+  @media(max-width:820px){ .about-grid{grid-template-columns:1fr;gap:clamp(24px,5vw,34px)} }
+  .about-portrait{margin:0;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -32px rgba(0,0,0,.5);border:1px solid var(--line)}
+  .about-portrait img{display:block;width:100%;height:auto}
+  .about-portrait figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:12px 14px;background:var(--panel)}
+  @media(min-width:821px){ .about-portrait{position:sticky;top:96px} }
+</style>
+<section class="section" style="background:var(--noir);color:#F4F2EE" id="arenes">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow" style="justify-content:center;color:rgba(255,255,255,.7)"><span lang="fr">Devant le public</span><span lang="en">In front of the crowd</span></span>
+      <h2 class="h-title" style="color:#fff"><span lang="fr">Des plateaux TV aux plus grandes arènes&nbsp;:</span><span lang="en">From TV studios to the biggest arenas:</span><br><span class="thin"><span lang="fr">jusqu'à 60 000 spectateurs.</span><span lang="en">up to 60,000 spectators.</span></span></h2>
+    </div>
+    <div class="arena-grid">
+      <article class="arena-card reveal">
+        <span class="arena-card__role">Broadcaster</span>
+        <div class="arena-card__num">3</div>
+        <div class="arena-card__unit"><span lang="fr">grands groupes médias</span><span lang="en">major media groups</span></div>
+        <p class="arena-card__ctx">Canal+ · beIN SPORTS · RMC Sport</p>
+      </article>
+      <article class="arena-card reveal d1">
+        <span class="arena-card__role">Olympic Host</span>
+        <div class="arena-card__num">13&nbsp;500</div>
+        <div class="arena-card__unit"><span lang="fr">spectateurs</span><span lang="en">spectators</span></div>
+        <p class="arena-card__ctx"><span lang="fr">Paris 2024, natation, Paris La Défense Arena</span><span lang="en">Paris 2024, swimming, Paris La Défense Arena</span></p>
+      </article>
+      <article class="arena-card reveal d2">
+        <span class="arena-card__role">International MC</span>
+        <div class="arena-card__num">60&nbsp;000</div>
+        <div class="arena-card__unit"><span lang="fr">spectateurs · en anglais</span><span lang="en">spectators · in English</span></div>
+        <p class="arena-card__ctx"><span lang="fr">Finale Champions Cup 2022, Orange Vélodrome, Marseille · La Rochelle – Leicester</span><span lang="en">2022 Champions Cup Final, Orange Vélodrome, Marseille · La Rochelle – Leicester</span></p>
+      </article>
+      <article class="arena-card reveal d3">
+        <span class="arena-card__role">Speaker</span>
+        <div class="arena-card__num">12&nbsp;000<span>+</span></div>
+        <div class="arena-card__unit"><span lang="fr">spectateurs</span><span lang="en">spectators</span></div>
+        <p class="arena-card__ctx"><span lang="fr">Speaker MMA, LDLC Arena, Lyon</span><span lang="en">MMA speaker, LDLC Arena, Lyon</span></p>
+      </article>
+    </div>
+    <div class="arena-pills reveal">
+      <span class="arena-pill"><strong>6</strong> <span lang="fr">CDM football</span><span lang="en">Football World Cups</span></span>
+      <span class="arena-pill"><strong>3</strong> <span lang="fr">CDM rugby</span><span lang="en">Rugby World Cups</span></span>
+      <span class="arena-pill">Paris 2024</span>
+      <span class="arena-pill">FR / EN <span lang="fr">bilingue</span><span lang="en">bilingual</span></span>
+      <span class="arena-pill">UFC · MMA · Football · Rugby · <span lang="fr">Natation</span><span lang="en">Swimming</span></span>
+    </div>
+    <p class="arena-expertises reveal"><span lang="fr">Journaliste · Présentateur · Commentateur · Interviewer · Speaker &amp; Maître de cérémonie</span><span lang="en">Journalist · Presenter · Commentator · Interviewer · Speaker &amp; MC</span></p>
+  </div>
+</section>
+
+<!-- ═══════════ RÉFÉRENCES ═══════════ -->
+<section class="section" id="references">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Références &amp; collaborations</span><span lang="en">References &amp; collaborations</span></span>
+      <h2 class="h-title"><span lang="fr">Ils m'ont fait confiance</span><span lang="en">They trusted me</span></h2>
+      <p class="lead"><span lang="fr">Les chaînes, médias et organisations qui me font confiance, à l'antenne comme sur scène.</span><span lang="en">The channels, media and organisations that trust me, on air and on stage.</span></p>
+    </div>
+    <div class="logos-grid reveal">
+      <div class="logo"><img src="assets/logos/rmc.png" alt="RMC Sport" loading="lazy"></div>
+      <div class="logo"><img src="assets/logos/bein.png" alt="beIN Sports" loading="lazy"></div>
+      <div class="logo"><img src="assets/logos/canal.png" alt="Canal+" loading="lazy"></div>
+      <div class="logo"><img src="assets/logos/eurosport.png" alt="Eurosport" loading="lazy"></div>
+      <div class="logo"><img src="assets/logos/w9.png" alt="W9" loading="lazy"></div>
+      <div class="logo"><img src="assets/logos/hexagone.png" alt="Hexagone MMA" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="section" style="background:var(--creme)" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="h-title"><span lang="fr">Parlons de votre projet</span><span lang="en">Let's talk about your project</span></h2>
+    </div>
+    <div class="contact-grid">
+      <!-- DATA-CONTACT : remplacez les coordonnées ci-dessous -->
+      <div class="contact-info reveal">
+        <p class="lead"><span lang="fr">Un projet, une émission, un événement ? Échangeons sur vos besoins, je vous réponds vite, avec une proposition adaptée.</span><span lang="en">A project, a show, an event? Let's talk about your needs, I reply fast, with a proposal tailored to you.</span></p>
+        <div class="cta-pair">
+          <a href="#form" class="btn btn-dark" data-project="tv"><span lang="fr">Proposer un projet TV</span><span lang="en">Pitch a TV project</span> <span class="arw" aria-hidden="true">→</span></a>
+          <a href="#form" class="btn btn-red" data-project="event"><span lang="fr">Proposer un événement</span><span lang="en">Pitch an event</span> <span class="arw" aria-hidden="true">→</span></a>
+        </div>
+        <div class="contact-lines">
+          <div class="c-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg><span class="k"><span lang="fr">Tél</span><span lang="en">Phone</span></span><a href="tel:+33613024587">06 13 02 45 87</a></div>
+          <div class="c-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="k"><span lang="fr">E-mail</span><span lang="en">Email</span></span><a href="mailto:tomdesse@gmail.com">tomdesse@gmail.com</a></div>
+          <div class="c-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span class="k">Instagram</span><a href="https://www.instagram.com/tomdessontv/" target="_blank" rel="noopener">@tomdessontv</a></div>
+          <div class="c-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4"/></svg><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/thomas-desson/" target="_blank" rel="noopener">Thomas Desson</a></div>
+        </div>
+      </div>
+      <form class="form reveal d1" id="form" novalidate>
+        <h3><span lang="fr">Demande de contact</span><span lang="en">Get in touch</span></h3>
+        <p class="form-note"><span lang="fr">Votre message est envoyé directement à Thomas. Vous pouvez aussi écrire à tomdesse@gmail.com.</span><span lang="en">Your message is sent straight to Thomas. You can also reach him at tomdesse@gmail.com.</span></p>
+        <div class="segmented" role="tablist" aria-label="Type de demande">
+          <button type="button" class="seg active" data-type="tv"><span lang="fr">Projet TV / média</span><span lang="en">TV / media project</span></button>
+          <button type="button" class="seg" data-type="event"><span lang="fr">Speaker / M. de cérémonie</span><span lang="en">Speaker / MC</span></button>
+          <button type="button" class="seg" data-type="autre"><span lang="fr">Autre demande</span><span lang="en">Other request</span></button>
+        </div>
+        <input type="hidden" id="projectType" name="type" value="Projet TV / média">
+        <div class="field-row"><div class="field"><label for="f-nom">Nom</label><input id="f-nom" type="text" autocomplete="name"></div><div class="field"><label for="f-ent">Entreprise</label><input id="f-ent" type="text" autocomplete="organization"></div></div>
+        <div class="field-row"><div class="field"><label for="f-mail"><span lang="fr">E-mail</span><span lang="en">Email</span></label><input id="f-mail" type="email" autocomplete="email"></div><div class="field"><label for="f-tel"><span lang="fr">Téléphone</span><span lang="en">Phone</span></label><input id="f-tel" type="tel" autocomplete="tel"></div></div>
+        <div class="field-row"><div class="field"><label for="f-date">Date de l'événement</label><input id="f-date" type="date"></div><div class="field"><label for="f-lieu">Lieu</label><input id="f-lieu" type="text"></div></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Décrivez votre projet, le format et vos attentes…"></textarea></div>
+        <button type="submit" class="form-submit"><span lang="fr">Envoyer la demande</span><span lang="en">Send request</span></button>
+        <div class="form-ok" id="formOk"><span lang="fr">Message envoyé à Thomas, merci ! Il vous répondra rapidement.</span><span lang="en">Message sent to Thomas, thank you! He'll get back to you shortly.</span></div>
+        <div class="form-ok form-err" id="formErr"><span lang="fr">L'envoi n'a pas pu aboutir. Merci d'écrire directement à <a href="mailto:tomdesse@gmail.com">tomdesse@gmail.com</a>.</span><span lang="en">The message could not be sent. Please write directly to <a href="mailto:tomdesse@gmail.com">tomdesse@gmail.com</a>.</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="wrap footer-mini">
+    <span><span lang="fr">© Thomas Desson, Tous droits réservés</span><span lang="en">© Thomas Desson, All rights reserved</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span><span lang="fr">Dossier confidentiel</span><span lang="en">Confidential document</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span class="footer-credit"><span lang="fr">Réalisé par</span><span lang="en">Made by</span> <span class="regard">regard<span class="dot">.</span></span></span>
+  </div>
+</footer></div>
+<div class="view" data-view="tv"><main>
+<!-- HERO UNIVERS -->
+<section class="uni-hero">
+  <span class="hero-mark" aria-hidden="true">r.</span>
+  <div class="wrap uni-hero__inner reveal">
+    <span class="eyebrow"><span lang="fr">Univers 01, Broadcaster TV</span><span lang="en">World 01, Broadcaster TV</span></span>
+    <h1 class="h-title"><span lang="fr">Une voix, un regard,</span><span lang="en">One voice, one eye,</span><br><span class="thin"><span lang="fr">une expertise du direct.</span><span lang="en">a mastery of live.</span></span></h1>
+    <p class="lead"><span lang="fr">Journaliste-présentateur international fort de plus de 20 ans d'expérience, j'accompagne médias, producteurs et organisateurs dans la présentation et la mise en valeur de leurs événements. Sports de combat, football, grands rendez-vous internationaux : je maîtrise le direct et je transmets l'émotion, en français comme en anglais.</span><span lang="en">An international journalist-presenter with 20+ years of experience, I support media, producers and organisers in presenting and showcasing their events. Combat sports, football, major international fixtures: I master live broadcasting and convey emotion, in both French and English.</span></p>
+    <a href="#tv-prestations" class="btn btn-red"><span lang="fr">Découvrir mes prestations</span><span lang="en">Discover my services</span> <span class="arw" aria-hidden="true">→</span></a>
+  </div>
+</section>
+<!-- IMAGE FORTE, SOUS LE TEXTE -->
+<figure class="topshot topshot--card">
+  <img src="assets/tv-gal-conor.jpg" width="820" height="1025" alt="Thomas Desson interviewant Conor McGregor pour RMC Sport" loading="eager">
+  <figcaption><b>Interview de Conor McGregor</b>, RMC Sport</figcaption>
+</figure>
+
+<!-- PRESTATIONS -->
+<section class="section" id="tv-prestations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Prestations</span><span lang="en">Services</span></span>
+      <h2 class="h-title"><span lang="fr">Ce que je peux prendre en charge</span><span lang="en">What I can take on</span></h2>
+      <p class="lead"><span lang="fr">Des formats audiovisuels maîtrisés, du plateau au direct, avec une exigence éditoriale constante.</span><span lang="en">Mastered audiovisual formats, from studio to live, with a constant editorial standard.</span></p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3><span lang="fr">Présentation TV</span><span lang="en">TV presenting</span></h3><p><span lang="fr">Présentation de programmes, journaux et magazines sportifs en plateau ou en direct.</span><span lang="en">Presenting programmes, news and sports magazines in studio or live.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></svg></div><h3><span lang="fr">Commentaire sportif en direct</span><span lang="en">Live sports commentary</span></h3><p><span lang="fr">Commentaire live d'événements et de combats, avec rythme, analyse et émotion.</span><span lang="en">Live commentary of events and fights, with pace, analysis and emotion.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div><h3><span lang="fr">Journalisme sportif</span><span lang="en">Sports journalism</span></h3><p><span lang="fr">Traitement de l'actualité, reportages, enquêtes et angles éditoriaux.</span><span lang="en">Covering the news, reports, investigations and editorial angles.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></div><h3>Interviews</h3><p><span lang="fr">Interviews d'athlètes, coachs et personnalités, en plateau comme en immersion.</span><span lang="en">Interviews with athletes, coaches and personalities, in studio and in the field.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5V3M17 5V3"/></svg></div><h3><span lang="fr">Présentation de plateaux</span><span lang="en">Studio hosting</span></h3><p><span lang="fr">Animation de plateaux et gestion des invités, chroniqueurs et transitions.</span><span lang="en">Hosting studios and managing guests, pundits and transitions.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg></div><h3><span lang="fr">Animation d'émissions</span><span lang="en">Show hosting</span></h3><p><span lang="fr">Fil rouge d'émissions, magazines et formats récurrents.</span><span lang="en">The through-line for shows, magazines and recurring formats.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 19h12"/><circle cx="19" cy="6" r="2"/></svg></div><h3>Podcasts</h3><p><span lang="fr">Animation et présentation de podcasts sportifs et de formats d'entretien.</span><span lang="en">Hosting and presenting sports podcasts and interview formats.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>WebTV</h3><p><span lang="fr">Présentation de formats WebTV et contenus digitaux pour médias et marques.</span><span lang="en">Presenting WebTV formats and digital content for media and brands.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="9"/></svg></div><h3><span lang="fr">Streaming en direct</span><span lang="en">Live streaming</span></h3><p><span lang="fr">Présentation de lives multi-plateformes et gestion de l'antenne en continu.</span><span lang="en">Presenting multi-platform lives and running continuous coverage.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10v4M7 6v12M11 3v18M15 7v10M19 10v4"/></svg></div><h3><span lang="fr">Voix off</span><span lang="en">Voice-over</span></h3><p><span lang="fr">Narration, habillage antenne et bandes-annonces avec une voix professionnelle.</span><span lang="en">Narration, channel idents and trailers with a professional voice.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 20a6 6 0 0 1 12 0M14 20a5.5 5.5 0 0 1 8 0"/></svg></div><h3><span lang="fr">Modération de débats</span><span lang="en">Debate moderation</span></h3><p><span lang="fr">Modération de tables rondes et débats, distribution de la parole et cadrage du temps.</span><span lang="en">Moderating panels and debates, managing turns and keeping to time.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3><span lang="fr">Contenus éditoriaux</span><span lang="en">Editorial content</span></h3><p><span lang="fr">Création et présentation de contenus éditoriaux pour l'antenne et le digital.</span><span lang="en">Creating and presenting editorial content for broadcast and digital.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section class="section" style="background:var(--noir-2)" id="tv-experience">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:24px">
+          <span class="eyebrow"><span lang="fr">Expérience &amp; collaborations</span><span lang="en">Experience &amp; collaborations</span></span>
+          <h2 class="h-title"><span lang="fr">Un parcours au contact</span><span lang="en">A career shaped by</span><br><span class="thin"><span lang="fr">du direct et du sport.</span><span lang="en">live and by sport.</span></span></h2>
+        </div>
+        <!-- DATA-EXP-TV : remplacez les placeholders par les expériences réelles -->
+        <div class="exp-list">
+          <div class="exp-row"><span class="yr"><span lang="fr">Depuis 2018</span><span lang="en">Since 2018</span></span><div><h4>RMC Sport</h4><p><span lang="fr">Présentateur TV, UFC, PFL Europe, Premier League</span><span lang="en">TV presenter, UFC, PFL Europe, Premier League</span></p></div></div>
+          <div class="exp-row"><span class="yr"><span lang="fr">Depuis 2025</span><span lang="en">Since 2025</span></span><div><h4><span lang="fr">Hexagone MMA, Speaker officiel</span><span lang="en">Hexagone MMA, Official speaker</span></h4><p><span lang="fr">Speaker des événements MMA, dans les arènes en Europe</span><span lang="en">Speaker for MMA events, in arenas across Europe</span></p></div></div>
+          <div class="exp-row"><span class="yr"><span lang="fr">Depuis 2017</span><span lang="en">Since 2017</span></span><div><h4><span lang="fr">TD Live, Maître de cérémonie</span><span lang="en">TD Live, Master of ceremonies</span></h4><p><span lang="fr">Animation d'événements, annonceur boxe & MMA, prise de parole</span><span lang="en">Event hosting, boxing & MMA announcer, public speaking</span></p></div></div>
+          <div class="exp-row"><span class="yr"><span lang="fr">Depuis 2022</span><span lang="en">Since 2022</span></span><div><h4>Sports Management School</h4><p><span lang="fr">Enseignant, prise de parole, personal branding, storytelling</span><span lang="en">Lecturer, public speaking, personal branding, storytelling</span></p></div></div>
+          <div class="exp-row"><span class="yr">2012–2018</span><div><h4><span lang="fr">beIN Sports, Journaliste-présentateur</span><span lang="en">beIN Sports, Journalist-presenter</span></h4><p><span lang="fr">Plateaux &amp; magazines sportifs (émission « Salon VIP »)</span><span lang="en">Studio shows &amp; sports magazines (“Salon VIP”)</span></p></div></div>
+          <div class="exp-row"><span class="yr">2008–2011</span><div><h4><span lang="fr">W9, Commentateur</span><span lang="en">W9, Commentator</span></h4><p><span lang="fr">Commentateur des Super Bowls XLIV · XLV · XLVI, sports US</span><span lang="en">Commentator of Super Bowls XLIV · XLV · XLVI, US sports</span></p></div></div>
+          <div class="exp-row"><span class="yr">2007–2010</span><div><h4><span lang="fr">Canal+, Commentateur freelance</span><span lang="en">Canal+, Freelance commentator</span></h4><p><span lang="fr">Football européen, sports US, golf, cyclisme</span><span lang="en">European football, US sports, golf, cycling</span></p></div></div>
+          <div class="exp-row"><span class="yr">2003–2009</span><div><h4><span lang="fr">Eurosport, Commentateur-reporter</span><span lang="en">Eurosport, Commentator-reporter</span></h4><p><span lang="fr">Débuts dans le journalisme sportif international</span><span lang="en">Early years in international sports journalism</span></p></div></div>
+          <div class="exp-row"><span class="yr"><span lang="fr">Formation</span><span lang="en">Training</span></span><div><h4><span lang="fr">Fox Sports World, Californie</span><span lang="en">Fox Sports World, California</span></h4><p><span lang="fr">Formation de journaliste-présentateur, San Diego · Los Angeles</span><span lang="en">Trained as a journalist-presenter, San Diego · Los Angeles</span></p></div></div>
+        </div>
+      </div>
+      <aside class="exp-side reveal d2">
+        <div class="mini-label"><span lang="fr">En quelques repères</span><span lang="en">A few markers</span></div>
+        <ul class="reperes">
+          <li><span lang="fr">20+ ans d'expérience média</span><span lang="en">20+ years in media</span></li>
+          <li><span lang="fr">Bilingue français / anglais</span><span lang="en">Bilingual French / English</span></li>
+          <li><span lang="fr">Master en PNL (communication neuro-linguistique)</span><span lang="en">Master's in NLP (Neuro-Linguistic Programming)</span></li>
+          <li><span lang="fr">Formé aux USA (Fox Sports World) &amp; en Espagne (Eurosport)</span><span lang="en">Trained in the USA (Fox Sports World) &amp; Spain (Eurosport)</span></li>
+        </ul>
+        <div class="mini-label" style="margin-top:32px"><span lang="fr">Médias partenaires</span><span lang="en">Media partners</span></div>
+        <p class="reperes-medias"><span>RMC Sport</span><span>beIN Sports</span><span>Canal+</span><span>W9</span><span>Eurosport</span><span>Fox Sports World</span></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BANDE DÉMO -->
+<section class="section" id="tv-demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Bande démo</span><span lang="en">Showreel</span></span>
+      <h2 class="h-title"><span lang="fr">Le direct, en images</span><span lang="en">Live, in pictures</span></h2>
+      <p class="lead"><span lang="fr">Extraits de commentaires, d'interviews et de passages en plateau.</span><span lang="en">Clips of commentary, interviews and studio segments.</span></p>
+    </div>
+    <div class="reels">
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Montage UFC &amp; football" style="aspect-ratio:16/9" poster="assets/posters/tv-ufc-football.jpg" src="assets/tv-ufc-football.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">UFC &amp; Football · RMC Sport</span><span lang="en">UFC &amp; Football · RMC Sport</span></span>
+          <h3><span lang="fr">Montage UFC &amp; football</span><span lang="en">UFC &amp; football reel</span></h3>
+          <p><span lang="fr">Des soirées UFC aux grands matchs de football : commentaire, interviews et présentation en direct.</span><span lang="en">From UFC nights to big football games: commentary, interviews and live presenting.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">commentaire · interview · présentation</span><span lang="en">commentary · interviews · presenting</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Paris Grand Slam de judo, jour 1" style="aspect-ratio:16/9" poster="assets/posters/tv-grandslam-paris-j1.jpg" src="assets/tv-grandslam-paris-j1.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Judo · Paris Grand Slam · RMC Sport</span><span lang="en">Judo · Paris Grand Slam · RMC Sport</span></span>
+          <h3><span lang="fr">Présentation, Paris Grand Slam, jour 1</span><span lang="en">Hosting, Paris Grand Slam, day 1</span></h3>
+          <p><span lang="fr">En direct de l'Accor Arena, je présente la grande soirée de judo et lance l'antenne devant une salle comble.</span><span lang="en">Live from the Accor Arena, I host the big judo night and open the broadcast before a packed crowd.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">présentation · direct · interviews</span><span lang="en">presenting · live · interviews</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Paris Grand Slam de judo, jour 2" style="aspect-ratio:16/9" poster="assets/posters/tv-grandslam-paris-j2.jpg" src="assets/tv-grandslam-paris-j2.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Judo · Paris Grand Slam · RMC Sport</span><span lang="en">Judo · Paris Grand Slam · RMC Sport</span></span>
+          <h3><span lang="fr">Présentation, Paris Grand Slam, jour 2</span><span lang="en">Hosting, Paris Grand Slam, day 2</span></h3>
+          <p><span lang="fr">Deuxième soirée à l'Accor Arena : plateau, interviews de judokas et ambiance de l'arène.</span><span lang="en">Second night at the Accor Arena: desk, judoka interviews and the atmosphere of the arena.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">présentation · plateau · interviews</span><span lang="en">presenting · desk · interviews</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Interview d'Audrey Tcheuméo au Paris Grand Slam" style="aspect-ratio:16/9" poster="assets/posters/tv-itw-tcheumeo.jpg" src="assets/tv-itw-tcheumeo.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Judo · Interview · Paris Grand Slam</span><span lang="en">Judo · Interview · Paris Grand Slam</span></span>
+          <h3><span lang="fr">Interview d'Audrey Tcheuméo</span><span lang="en">Interview with Audrey Tcheuméo</span></h3>
+          <p><span lang="fr">Face-à-face avec la championne de judo, médaille au cou, au cœur de l'Accor Arena.</span><span lang="en">One-on-one with the judo champion, medal around her neck, in the heart of the Accor Arena.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">interview · écoute · direct</span><span lang="en">interviewing · listening · live</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Bande démo complète de Thomas Desson" poster="assets/posters/showreel-thomas.jpg" src="assets/showreel-thomas.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Bande démo · 20+ ans d'antenne · FR/EN</span><span lang="en">Showreel · 20+ years on air · FR/EN</span></span>
+          <h3><span lang="fr">La bande démo complète</span><span lang="en">The full showreel</span></h3>
+          <p><span lang="fr">Plateaux, commentaires, interviews : un condensé de ma voix et de ma maîtrise du direct.</span><span lang="en">Studio, commentary, interviews: a condensed look at my voice and command of live.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">présentation · commentaire · interview</span><span lang="en">presenting · commentary · interviews</span></b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="section" style="background:var(--noir-2)" id="tv-galerie">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Galerie</span><span lang="en">Gallery</span></span>
+      <h2 class="h-title"><span lang="fr">En studio &amp; sur le terrain</span><span lang="en">In studio &amp; on the field</span></h2>
+    </div>
+    <!-- GALERIE : remplacez chaque .ph-fill par <img src="assets/tv-01.jpg" alt="..."> -->
+    <div class="gallery" data-gallery="tv">
+      <div class="ph reveal" data-cap="En position de commentaire, stade"><img src="assets/tv-gal-stadium.jpg" width="750" height="750" alt="Thomas Desson en position de commentaire dans un stade" loading="lazy"></div>
+      <div class="ph reveal" data-cap="« Réveil Matin Céline », RMC Sport"><img src="assets/tv-gal-reveilmatin.jpg" width="750" height="400" alt="Thomas Desson et Céline Géraud, matinale « Réveil Matin Céline » sur RMC Sport" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Modération, Global Sports Week (Viva Technology)"><img src="assets/tv-gal-gsw.jpg" width="768" height="512" alt="Thomas Desson modérant un panel, Global Sports Week à Viva Technology" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Portrait"><img src="assets/tv-gal-portrait.jpg" width="394" height="507" alt="Portrait de Thomas Desson en plateau" loading="lazy"></div>
+      <div class="ph reveal" data-cap="UFC Paris, RMC Sport"><img src="assets/tv-gal-ufc-paris.jpg" width="1600" height="739" alt="Thomas Desson en direct de l'UFC Paris pour RMC Sport" loading="lazy"></div>
+      <div class="ph reveal" data-cap="UFC, Centre Bell, Montréal (RMC Sport)"><img src="assets/tv-gal-ufc-montreal.jpg" width="1600" height="1200" alt="Thomas Desson en direct de l'UFC au Centre Bell de Montréal pour RMC Sport" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Finale Europa League 2020, Cologne"><img src="assets/tv-gal-europa-cologne.jpg" width="1600" height="1200" alt="Thomas Desson au commentaire de la finale de l'Europa League 2020 à Cologne" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Stamford Bridge, RMC Sport (avec Emmanuel Petit)"><img src="assets/tv-gal-chelsea.jpg" width="1600" height="1200" alt="Thomas Desson à Stamford Bridge pour RMC Sport, avec Emmanuel Petit" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Ligue 2, Gazélec Ajaccio (beIN SPORTS)"><img src="assets/tv-gal-alacciu.jpg" width="1200" height="1600" alt="Thomas Desson au bord du terrain du Gazélec Ajaccio pour beIN SPORTS" loading="lazy"></div>
+      <div class="ph reveal" data-cap="« L'Expresso Weekend », beIN SPORTS (avec Guy Forget)"><img src="assets/tv-gal-bein-forget.jpg" width="1600" height="899" alt="Thomas Desson sur le plateau de L'Expresso Weekend sur beIN SPORTS, avec Guy Forget" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="section" id="tv-competences">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Compétences</span><span lang="en">Skills</span></span>
+      <h2 class="h-title"><span lang="fr">Ce qui fait la différence à l'antenne</span><span lang="en">What makes the difference on air</span></h2>
+    </div>
+    <div class="skills">
+      <div class="skill reveal"><div class="sk-n">01</div><h4><span lang="fr">Maîtrise du direct</span><span lang="en">Live mastery</span></h4><p><span lang="fr">Tenir l'antenne, garder le fil et le calme, quoi qu'il arrive.</span><span lang="en">Holding the air, keeping the thread and the calm, whatever happens.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">02</div><h4><span lang="fr">Capacité d'analyse</span><span lang="en">Analytical mind</span></h4><p><span lang="fr">Lire un combat, un match, une situation et l'expliquer clairement.</span><span lang="en">Reading a fight, a match, a situation and explaining it clearly.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">03</div><h4><span lang="fr">Préparation éditoriale</span><span lang="en">Editorial prep</span></h4><p><span lang="fr">Recherche, angles et documentation en amont de chaque intervention.</span><span lang="en">Research, angles and documentation ahead of every booking.</span></p></div>
+      <div class="skill reveal d3"><div class="sk-n">04</div><h4>Storytelling</h4><p><span lang="fr">Transformer les faits en récit et faire monter l'émotion.</span><span lang="en">Turning facts into a story and building the emotion.</span></p></div>
+      <div class="skill reveal"><div class="sk-n">05</div><h4><span lang="fr">Réactivité</span><span lang="en">Responsiveness</span></h4><p><span lang="fr">Rebondir en temps réel sur l'imprévu et l'actualité.</span><span lang="en">Reacting in real time to the unexpected and the news.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">06</div><h4><span lang="fr">Gestion des imprévus</span><span lang="en">Handling the unexpected</span></h4><p><span lang="fr">Meubler, relancer, rattraper, sans que ça se voie à l'écran.</span><span lang="en">Filling, reviving, recovering, without it showing on screen.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">07</div><h4><span lang="fr">Vulgarisation</span><span lang="en">Making it clear</span></h4><p><span lang="fr">Rendre le sport de combat lisible pour tous les publics.</span><span lang="en">Making combat sports readable for every audience.</span></p></div>
+      <div class="skill reveal d3"><div class="sk-n">08</div><h4><span lang="fr">Sports de combat</span><span lang="en">Combat sports</span></h4><p><span lang="fr">Connaissance fine du MMA, de la boxe et de leur écosystème.</span><span lang="en">In-depth knowledge of MMA, boxing and their ecosystem.</span></p></div>
+      <div class="skill reveal"><div class="sk-n">09</div><h4><span lang="fr">Aisance face caméra</span><span lang="en">At ease on camera</span></h4><p><span lang="fr">Présence, regard et diction au service du message.</span><span lang="en">Presence, gaze and diction serving the message.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">10</div><h4><span lang="fr">Qualité d'interview</span><span lang="en">Interview craft</span></h4><p><span lang="fr">Mettre l'invité en confiance et aller chercher la bonne réponse.</span><span lang="en">Putting the guest at ease and drawing out the right answer.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">11</div><h4><span lang="fr">Adaptation éditoriale</span><span lang="en">Editorial fit</span></h4><p><span lang="fr">Épouser le ton et la ligne de chaque média.</span><span lang="en">Matching the tone and line of each outlet.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CONTACT -->
+<section class="section" style="background:var(--rouge);color:#fff;text-align:center">
+  <div class="wrap reveal">
+    <h2 class="h-title" style="margin-bottom:14px"><span lang="fr">Un projet TV en tête&nbsp;?</span><span lang="en">Got a TV project in mind?</span></h2>
+    <p class="lead" style="color:rgba(255,255,255,.85);margin:0 auto 26px"><span lang="fr">Parlons-en. Réponse rapide et proposition adaptée à votre antenne.</span><span lang="en">Let's talk. Fast reply and a proposal tailored to your channel.</span></p>
+    <a href="#" data-view="home" data-scroll="contact" class="btn" style="background:#fff;color:var(--rouge)"><span lang="fr">Me contacter</span><span lang="en">Contact me</span> <span class="arw" aria-hidden="true">→</span></a>
+    <div style="margin-top:20px"><a href="#" data-view="speaker" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.85;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:3px"><span lang="fr">Voir l'univers Speaker →</span><span lang="en">See the Speaker world →</span></a></div>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="wrap footer-mini">
+    <span><span lang="fr">© Thomas Desson, Tous droits réservés</span><span lang="en">© Thomas Desson, All rights reserved</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span><span lang="fr">Dossier confidentiel</span><span lang="en">Confidential document</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span class="footer-credit"><span lang="fr">Réalisé par</span><span lang="en">Made by</span> <span class="regard">regard<span class="dot">.</span></span></span>
+  </div>
+</footer></div>
+<div class="view" data-view="speaker"><main>
+<!-- HERO UNIVERS -->
+<section class="uni-hero">
+  <span class="hero-mark" aria-hidden="true">r.</span>
+  <div class="wrap uni-hero__inner reveal">
+    <span class="eyebrow"><span lang="fr">Univers 02, Speaker &amp; Maître de cérémonie</span><span lang="en">World 02, Speaker &amp; Master of Ceremonies</span></span>
+    <h1 class="h-title"><span lang="fr">Donner une voix et un rythme</span><span lang="en">Giving a voice and a rhythm</span><br><span class="thin"><span lang="fr">à chaque événement.</span><span lang="en">to every event.</span></span></h1>
+    <p class="lead"><span lang="fr">Speaker et maître de cérémonie, j'accompagne les organisateurs dans la création d'une expérience forte, fluide et mémorable. De l'ouverture de l'événement jusqu'aux moments les plus importants, j'assure le lien entre la scène, les intervenants, les athlètes et le public.</span><span lang="en">As a speaker and master of ceremonies, I help organisers craft a strong, seamless and memorable experience. From the opening of the event to its most important moments, I am the link between the stage, the speakers, the athletes and the crowd.</span></p>
+    <a href="#sp-prestations" class="btn btn-red"><span lang="fr">Découvrir mes prestations événementielles</span><span lang="en">Discover my event services</span> <span class="arw" aria-hidden="true">→</span></a>
+  </div>
+</section>
+<!-- IMAGE FORTE, SOUS LE TEXTE -->
+<figure class="topshot topshot--card topshot--wide">
+  <img src="assets/sp-hexagone-annonce.jpg" width="1170" height="754" alt="Thomas Desson, speaker officiel Hexagone MMA, annonçant à pleine voix dans la cage" loading="eager">
+  <figcaption><b>Speaker officiel Hexagone MMA</b>, <span lang="fr">l'annonce dans la cage</span><span lang="en">the call inside the cage</span></figcaption>
+</figure>
+
+<!-- PRESTATIONS -->
+<section class="section" id="sp-prestations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Prestations</span><span lang="en">Services</span></span>
+      <h2 class="h-title"><span lang="fr">Sur scène, du premier au dernier mot</span><span lang="en">On stage, from the first word to the last</span></h2>
+      <p class="lead"><span lang="fr">Je prépare, coordonne et porte l'événement, pas seulement un micro.</span><span lang="en">I prepare, coordinate and carry the event, not just a mic.</span></p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg></div><h3><span lang="fr">Media training & prise de parole</span><span lang="en">Media training & public speaking</span></h3><p><span lang="fr">Accompagnement de dirigeants et porte-parole : coaching de prise de parole en public et media training.</span><span lang="en">Coaching executives and spokespeople: public-speaking training and media training.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg></div><h3><span lang="fr">Speaker d'événements sportifs</span><span lang="en">Sports event speaker</span></h3><p><span lang="fr">Annonce, dynamique et ferveur pour compétitions et galas de sport.</span><span lang="en">Announcing, drive and fervour for competitions and sports galas.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M4 7l3 2M20 7l-3 2M6 21h12l-2-9H8z"/></svg></div><h3><span lang="fr">Maître de cérémonie</span><span lang="en">Master of ceremonies</span></h3><p><span lang="fr">Fil rouge protocolaire, temps forts et transitions maîtrisées.</span><span lang="en">Protocol thread, key moments and controlled transitions.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 16l-5 2.9 1-5.5-4-3.9 5.5-.8z"/></svg></div><h3><span lang="fr">Présentation de galas</span><span lang="en">Gala hosting</span></h3><p><span lang="fr">Élégance et rythme pour soirées de prestige et cérémonies.</span><span lang="en">Elegance and pace for prestige evenings and ceremonies.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 19v2M16 19v2"/></svg></div><h3><span lang="fr">Soirées d'entreprise</span><span lang="en">Corporate evenings</span></h3><p><span lang="fr">Animation conviviale et professionnelle des événements internes.</span><span lang="en">Warm, professional hosting of internal events.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="3"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M12 10v4"/></svg></div><h3><span lang="fr">Présentation de conférences</span><span lang="en">Conference hosting</span></h3><p><span lang="fr">Introduction, cadence et présentation des intervenants.</span><span lang="en">Introduction, pacing and speaker presentations.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M6 4h12v6a6 6 0 0 1-12 0zM6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg></div><h3><span lang="fr">Remises de prix</span><span lang="en">Award ceremonies</span></h3><p><span lang="fr">Mise en valeur des lauréats et gestion du protocole.</span><span lang="en">Spotlighting winners and managing the protocol.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M9 5h6M5 22l3-9h8l3 9z"/></svg></div><h3><span lang="fr">Lancements de produits</span><span lang="en">Product launches</span></h3><p><span lang="fr">Révélations et keynotes rythmées pour marques et enseignes.</span><span lang="en">Reveals and paced keynotes for brands and retailers.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V6l8-3 8 3v14M4 20h16M9 20v-5h6v5"/></svg></div><h3><span lang="fr">Inaugurations</span><span lang="en">Openings</span></h3><p><span lang="fr">Prise de parole officielle et animation des temps protocolaires.</span><span lang="en">Official speeches and hosting of protocol moments.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V8l9-5 9 5v13M3 21h18M8 21v-6h8v6"/><path d="M12 3v3"/></svg></div><h3><span lang="fr">Événements institutionnels</span><span lang="en">Institutional events</span></h3><p><span lang="fr">Ton juste et solennité pour collectivités et institutions.</span><span lang="en">The right tone and gravitas for public bodies and institutions.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18V6a2 2 0 0 1 2-2h9l5 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 9h6M8 13h4"/></svg></div><h3>Festivals</h3><p><span lang="fr">Énergie de plein air et animation de grandes scènes publiques.</span><span lang="en">Open-air energy and hosting of large public stages.</span></p></article>
+      <article class="card reveal d2"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M8 8h8M8 12h5"/></svg></div><h3><span lang="fr">Séminaires</span><span lang="en">Seminars</span></h3><p><span lang="fr">Modération et fil conducteur de journées d'entreprise.</span><span lang="en">Moderation and through-line for company days.</span></p></article>
+      <article class="card reveal d3"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="9" r="2.4"/><circle cx="17" cy="9" r="2.4"/><path d="M2 19a5 5 0 0 1 10 0M12 19a5 5 0 0 1 10 0"/></svg></div><h3><span lang="fr">Animation de tables rondes</span><span lang="en">Panel hosting</span></h3><p><span lang="fr">Distribution de la parole et relances pour des échanges vivants.</span><span lang="en">Managing turns and prompts for lively exchanges.</span></p></article>
+      <article class="card reveal"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></div><h3><span lang="fr">Présentation d'intervenants</span><span lang="en">Introducing speakers</span></h3><p><span lang="fr">Introduire, situer et mettre en lumière chaque prise de parole.</span><span lang="en">Introducing, framing and spotlighting every talk.</span></p></article>
+      <article class="card reveal d1"><div class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3><span lang="fr">Gestion des temps forts</span><span lang="en">Managing highlights</span></h3><p><span lang="fr">Orchestrer les moments-clés et tenir le timing de bout en bout.</span><span lang="en">Orchestrating key moments and holding the timing throughout.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- CE QUE THOMAS APPORTE -->
+<section class="section" style="background:var(--creme)" id="sp-apport">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Sa valeur ajoutée</span><span lang="en">His added value</span></span>
+      <h2 class="h-title"><span lang="fr">Ce que j'apporte à un événement</span><span lang="en">What I bring to an event</span></h2>
+    </div>
+    <div class="skills">
+      <div class="skill reveal"><div class="sk-n">01</div><h4><span lang="fr">Présence scénique</span><span lang="en">Stage presence</span></h4><p><span lang="fr">Occuper la scène et capter l'attention dès l'entrée.</span><span lang="en">Owning the stage and grabbing attention from the start.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">02</div><h4><span lang="fr">Voix professionnelle</span><span lang="en">Professional voice</span></h4><p><span lang="fr">Un timbre posé, une diction claire, une projection maîtrisée.</span><span lang="en">A steady tone, clear diction, controlled projection.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">03</div><h4><span lang="fr">Énergie</span><span lang="en">Energy</span></h4><p><span lang="fr">Faire monter et redescendre l'intensité au bon moment.</span><span lang="en">Raising and easing the intensity at the right time.</span></p></div>
+      <div class="skill reveal d3"><div class="sk-n">04</div><h4><span lang="fr">Charisme</span><span lang="en">Charisma</span></h4><p><span lang="fr">Créer une connexion immédiate avec la salle.</span><span lang="en">Creating an instant connection with the room.</span></p></div>
+      <div class="skill reveal"><div class="sk-n">05</div><h4><span lang="fr">Maîtrise du rythme</span><span lang="en">Command of pace</span></h4><p><span lang="fr">Ni temps mort, ni précipitation, la juste cadence.</span><span lang="en">No dead air, no rushing, just the right cadence.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">06</div><h4><span lang="fr">Aisance avec le public</span><span lang="en">Ease with the crowd</span></h4><p><span lang="fr">Interpeller, embarquer et faire réagir la foule.</span><span lang="en">Engaging, carrying and getting the crowd to react.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">07</div><h4><span lang="fr">Gestion des imprévus</span><span lang="en">Handling the unexpected</span></h4><p><span lang="fr">Rester serein et rebondir quand le programme dérape.</span><span lang="en">Staying calm and bouncing back when the schedule slips.</span></p></div>
+      <div class="skill reveal d3"><div class="sk-n">08</div><h4><span lang="fr">Adaptation au format</span><span lang="en">Format adaptation</span></h4><p><span lang="fr">Du gala feutré à la cage électrique, le bon registre.</span><span lang="en">From the hushed gala to the electric cage, the right register.</span></p></div>
+      <div class="skill reveal"><div class="sk-n">09</div><h4><span lang="fr">Coordination régie</span><span lang="en">Production coordination</span></h4><p><span lang="fr">Travailler main dans la main avec la technique et la lumière.</span><span lang="en">Working hand in hand with tech and lighting.</span></p></div>
+      <div class="skill reveal d1"><div class="sk-n">10</div><h4><span lang="fr">Préparation des conducteurs</span><span lang="en">Run-of-show prep</span></h4><p><span lang="fr">Écrire et affiner le déroulé minute par minute.</span><span lang="en">Writing and refining the running order minute by minute.</span></p></div>
+      <div class="skill reveal d2"><div class="sk-n">11</div><h4><span lang="fr">Mise en valeur des intervenants</span><span lang="en">Spotlighting speakers</span></h4><p><span lang="fr">Chaque invité présenté sous son meilleur jour.</span><span lang="en">Every guest presented at their best.</span></p></div>
+      <div class="skill reveal d3"><div class="sk-n">12</div><h4><span lang="fr">Respect du timing</span><span lang="en">Respecting the timing</span></h4><p><span lang="fr">Tenir le planning sans jamais casser l'ambiance.</span><span lang="en">Keeping to schedule without ever killing the mood.</span></p></div>
+      <div class="skill reveal"><div class="sk-n">13</div><h4><span lang="fr">Création d'émotion</span><span lang="en">Creating emotion</span></h4><p><span lang="fr">Provoquer le frisson sur les moments qui comptent.</span><span lang="en">Sparking the thrill on the moments that matter.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDE DÉMO -->
+<section class="section" id="sp-demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Bande démo</span><span lang="en">Showreel</span></span>
+      <h2 class="h-title"><span lang="fr">L'ambiance, en direct</span><span lang="en">The atmosphere, live</span></h2>
+      <p class="lead"><span lang="fr">De la cage MMA à la scène : annonces, animation et modération devant le public.</span><span lang="en">From the MMA cage to the stage: announcements, hosting and moderation in front of the crowd.</span></p>
+    </div>
+    <div class="reels">
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Main events, Hexagone MMA" style="aspect-ratio:16/9" poster="assets/posters/sp-main-events.jpg" src="assets/sp-main-events.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Hexagone MMA · Main events</span><span lang="en">Hexagone MMA · Main events</span></span>
+          <h3><span lang="fr">Les main events, dans la cage</span><span lang="en">The main events, inside the cage</span></h3>
+          <p><span lang="fr">J'annonce les combats phares, micro en main au centre de l'octogone, salle debout.</span><span lang="en">I announce the headline fights, mic in hand at the centre of the octagon, crowd on its feet.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">annonce · présence · gestion du public</span><span lang="en">announcing · presence · crowd control</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Teaser Hexagone MMA Paris" style="aspect-ratio:16/9" poster="assets/posters/sp-teaser-hx-paris.jpg" src="assets/sp-teaser-hx-paris.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Hexagone MMA · Paris · Teaser</span><span lang="en">Hexagone MMA · Paris · Teaser</span></span>
+          <h3><span lang="fr">Teaser, Hexagone MMA Paris</span><span lang="en">Teaser, Hexagone MMA Paris</span></h3>
+          <p><span lang="fr">L'énergie d'un gala parisien : entrées, combats et temps forts portés à la voix.</span><span lang="en">The energy of a Paris gala: walkouts, fights and highlights carried by the voice.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">événement · ambiance · scène</span><span lang="en">event · atmosphere · stage</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Teaser Hexagone MMA Lyon" style="aspect-ratio:16/9" poster="assets/posters/sp-teaser-hx-lyon.jpg" src="assets/sp-teaser-hx-lyon.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Hexagone MMA · Lyon · Teaser</span><span lang="en">Hexagone MMA · Lyon · Teaser</span></span>
+          <h3><span lang="fr">Teaser, Hexagone MMA Lyon</span><span lang="en">Teaser, Hexagone MMA Lyon</span></h3>
+          <p><span lang="fr">Annonces, interviews dans la cage et montée en tension d'une soirée à Lyon.</span><span lang="en">Announcements, in-cage interviews and the rising tension of a night in Lyon.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">annonce · interview · ambiance</span><span lang="en">announcing · interviews · atmosphere</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Bande démo Speaker MMA de Thomas Desson (en anglais)" style="aspect-ratio:16/9" poster="assets/posters/sp-td-speaker.jpg" src="assets/sp-td-speaker.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Speaker &amp; interviewer · MMA · En anglais</span><span lang="en">Speaker &amp; interviewer · MMA · In English</span></span>
+          <h3><span lang="fr">La bande démo Speaker</span><span lang="en">The speaker showreel</span></h3>
+          <p><span lang="fr">Annonces dans la cage et interviews de combattants (UFC, Hexagone) menées <strong style="color:var(--noir);font-weight:600">entièrement en anglais</strong> : présence, énergie et gestion du public.</span><span lang="en">Cage announcements and fighter interviews (UFC, Hexagone) conducted <strong style="color:var(--noir);font-weight:600">entirely in English</strong>: presence, energy and crowd control.</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">anglais · présence scénique · interviews</span><span lang="en">English · stage presence · interviews</span></b></span>
+        </div>
+      </div>
+      <div class="reel reveal">
+        <div class="reel__media"><video controls preload="metadata" playsinline aria-label="Modération de panel, Global Sports Week" style="aspect-ratio:640/406" poster="assets/posters/tv-talkshow.jpg" src="assets/tv-talkshow.mp4"></video></div>
+        <div class="reel__ctx">
+          <span class="k"><span lang="fr">Global Sports Week · Scène · Modération</span><span lang="en">Global Sports Week · Stage · Moderation</span></span>
+          <h3><span lang="fr">Modération de panel, Ntamack &amp; Rivoal</span><span lang="en">Panel moderation, Ntamack &amp; Rivoal</span></h3>
+          <p><span lang="fr">Sur scène, j'anime l'échange avec Émile Ntamack et Jacques Rivoal (France 2023).</span><span lang="en">On stage, I host the discussion with Émile Ntamack and Jacques Rivoal (Rugby World Cup France 2023).</span></p>
+          <span class="reel__tag"><span lang="fr">Démontre</span><span lang="en">Shows</span> <b><span lang="fr">modération · scène · interviews</span><span lang="en">moderation · stage · interviews</span></b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="section" style="background:var(--creme)" id="sp-galerie">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Galerie</span><span lang="en">Gallery</span></span>
+      <h2 class="h-title"><span lang="fr">Micro en main, salle debout</span><span lang="en">Mic in hand, crowd on its feet</span></h2>
+    </div>
+    <div class="gallery" data-gallery="sp">
+      <div class="ph reveal" data-cap="Interview d'un combattant dans la cage, Hexagone MMA"><img src="assets/sp-gal-01.jpg" width="1000" height="668" alt="Thomas Desson interviewant un combattant dans la cage, Hexagone MMA" loading="lazy"></div>      <div class="ph reveal" data-cap="Annonce dans la cage, Hexagone MMA"><img src="assets/sp-gal-08.jpg" width="1000" height="666" alt="Thomas Desson annonçant dans la cage, Hexagone MMA" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Avec un combattant vainqueur, Hexagone MMA"><img src="assets/sp-gal-09.jpg" width="1000" height="667" alt="Thomas Desson avec un combattant vainqueur, Hexagone MMA" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Dans l'arène avec un champion, Hexagone MMA"><img src="assets/sp-gal-10.jpg" width="1000" height="817" alt="Thomas Desson dans l'arène avec un commentateur et un champion, Hexagone MMA" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Finale Champions Cup 2022, Orange Vélodrome"><img src="assets/sp-gal-champions-cup.jpg" width="1530" height="1600" alt="Thomas Desson sur la pelouse de l'Orange Vélodrome pour la finale de Champions Cup 2022" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Annonce face au combattant, Hexagone MMA"><img src="assets/sp-gal-hexagone-ngannou.jpg" width="1600" height="1180" alt="Thomas Desson annonçant un combattant dans la cage, Hexagone MMA" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Dans la cage, à pleine voix, Hexagone MMA"><img src="assets/sp-gal-hexagone-cage.jpg" width="1600" height="1448" alt="Thomas Desson annonçant à pleine voix à travers la cage, Hexagone MMA" loading="lazy"></div>
+      <div class="ph reveal" data-cap="Entrée du combattant, Hexagone MMA, Nantes"><img src="assets/sp-gal-hexagone-nantes.jpg" width="1600" height="1066" alt="Thomas Desson accompagnant l'entrée d'un combattant dans la cage, Hexagone MMA à Nantes" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="section" id="sp-process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span lang="fr">Méthode</span><span lang="en">Method</span></span>
+      <h2 class="h-title"><span lang="fr">Le déroulement d'une collaboration</span><span lang="en">How a collaboration unfolds</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step-item reveal"><span class="num">1</span><div><h4><span lang="fr">Échange sur le projet</span><span lang="en">Project discussion</span></h4><p><span lang="fr">Premier contact pour cerner vos attentes et le cadre de l'événement.</span><span lang="en">First contact to pin down your expectations and the event's scope.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">2</span><div><h4><span lang="fr">Compréhension de l'événement</span><span lang="en">Understanding the event</span></h4><p><span lang="fr">Public, enjeux, temps forts, ton souhaité, on cadre l'essentiel.</span><span lang="en">Audience, stakes, highlights, desired tone, we frame the essentials.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">3</span><div><h4><span lang="fr">Préparation éditoriale</span><span lang="en">Editorial prep</span></h4><p><span lang="fr">Recherche, documentation et écriture des prises de parole.</span><span lang="en">Research, documentation and scripting of the talks.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">4</span><div><h4><span lang="fr">Création ou adaptation du conducteur</span><span lang="en">Creating or adapting the run-of-show</span></h4><p><span lang="fr">Un déroulé précis, minute par minute, calé sur votre programme.</span><span lang="en">A precise running order, minute by minute, aligned with your programme.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">5</span><div><h4><span lang="fr">Coordination avec l'organisation et la régie</span><span lang="en">Coordination with organisers and production</span></h4><p><span lang="fr">Alignement avec les équipes techniques, son et lumière.</span><span lang="en">Alignment with the technical, sound and lighting teams.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">6</span><div><h4><span lang="fr">Répétition ou briefing</span><span lang="en">Rehearsal or briefing</span></h4><p><span lang="fr">Derniers ajustements et calage des enchaînements.</span><span lang="en">Final tweaks and locking the sequence.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">7</span><div><h4><span lang="fr">Présentation le jour J</span><span lang="en">Hosting on the day</span></h4><p><span lang="fr">Animation complète de l'événement, du lancement au final.</span><span lang="en">Full hosting of the event, from kickoff to finale.</span></p></div></div>
+      <div class="step-item reveal"><span class="num">8</span><div><h4><span lang="fr">Débrief éventuel</span><span lang="en">Optional debrief</span></h4><p><span lang="fr">Retour à froid pour capitaliser sur les prochaines éditions.</span><span lang="en">A cool-headed review to build on for future editions.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CONTACT -->
+<section class="section" style="background:var(--noir);color:#fff;text-align:center">
+  <div class="wrap reveal">
+    <h2 class="h-title" style="margin-bottom:14px"><span lang="fr">Un événement à faire vivre&nbsp;?</span><span lang="en">An event to bring to life?</span></h2>
+    <p class="lead" style="color:rgba(244,242,238,.75);margin:0 auto 26px"><span lang="fr">Confiez-moi le micro : préparation, conducteur et présence le jour J.</span><span lang="en">Hand me the mic: preparation, run-of-show and presence on the day.</span></p>
+    <a href="#" data-view="home" data-scroll="contact" class="btn btn-red"><span lang="fr">Proposer un événement</span><span lang="en">Pitch an event</span> <span class="arw" aria-hidden="true">→</span></a>
+    <div style="margin-top:20px"><a href="#" data-view="tv" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.85;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:3px"><span lang="fr">Voir l'univers Broadcaster TV →</span><span lang="en">See the Broadcaster TV world →</span></a></div>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="wrap footer-mini">
+    <span><span lang="fr">© Thomas Desson, Tous droits réservés</span><span lang="en">© Thomas Desson, All rights reserved</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span><span lang="fr">Dossier confidentiel</span><span lang="en">Confidential document</span></span>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <span class="footer-credit"><span lang="fr">Réalisé par</span><span lang="en">Made by</span> <span class="regard">regard<span class="dot">.</span></span></span>
+  </div>
+</footer></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu image">
+  <button class="lightbox__close" id="lbClose" aria-label="Fermer">✕</button>
+  <button class="lightbox__nav prev" id="lbPrev" aria-label="Précédente">‹</button>
+  <div class="lightbox__inner"><div class="lightbox__frame" id="lbFrame"></div><div class="lightbox__cap" id="lbCap"></div></div>
+  <button class="lightbox__nav next" id="lbNext" aria-label="Suivante">›</button>
+</div>
+
+
+<script>
+
+(function(){
+  'use strict';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var body=document.body, nav=document.getElementById('nav');
+  var current='home';
+  var THEME={home:'page-cover',tv:'page-tv',speaker:'page-speaker'};
+  var lang=(function(){try{return localStorage.getItem('td-lang')==='en'?'en':'fr';}catch(e){return 'fr';}})();
+
+  function applyBody(){ body.className=THEME[current]+(lang==='en'?' lang-en':'')+(body.classList.contains('menu-open')?' menu-open':''); }
+
+  /* ---------- LANGUE ---------- */
+  var LABELS={'f-nom':['Nom','Name'],'f-ent':['Entreprise','Company'],'f-mail':['E-mail','Email'],'f-tel':['Téléphone','Phone'],'f-date':["Date de l'événement",'Event date'],'f-lieu':['Lieu','Location'],'f-msg':['Message','Message']};
+  var PH={fr:'Décrivez votre projet, le format et vos attentes…',en:'Describe your project, the format and your expectations…'};
+  function applyLang(l){
+    lang=l; document.documentElement.lang=l;
+    document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-lang')===l);});
+    Object.keys(LABELS).forEach(function(id){var la=document.querySelector('label[for="'+id+'"]'); if(la) la.textContent=LABELS[id][l==='en'?1:0];});
+    var msg=document.getElementById('f-msg'); if(msg) msg.setAttribute('placeholder',l==='en'?PH.en:PH.fr);
+    try{localStorage.setItem('td-lang',l);}catch(e){}
+    applyBody();
+  }
+  document.querySelectorAll('.lang-switch button').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang'));});});
+
+  /* ---------- ROUTER DE VUES ---------- */
+  var views=document.querySelectorAll('.view');
+  function showView(name,scrollTo){
+    current=name;
+    views.forEach(function(v){v.classList.toggle('active',v.getAttribute('data-view')===name);});
+    applyBody();
+    // nav active
+    document.querySelectorAll('.nl').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-view')===name && !a.getAttribute('data-scroll'));});
+    // révèle immédiatement le contenu de la vue affichée
+    var active=document.querySelector('.view.active');
+    if(active) active.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+    // scroll
+    if(scrollTo){ var t=document.getElementById(scrollTo); if(t){ t.scrollIntoView({behavior:reduce?'auto':'smooth'}); } }
+    else { window.scrollTo({top:0,behavior:'auto'}); }
+    updateNav();
+    // compteurs si présents
+    active && active.querySelectorAll('.stat__num').forEach(animateCount);
+  }
+  function handleNav(e){
+    var a=e.target.closest('[data-view]:not(.view)'); if(!a) return;
+    e.preventDefault();
+    body.classList.remove('menu-open'); var bg=document.getElementById('burger'); if(bg) bg.setAttribute('aria-expanded','false');
+    var v=a.getAttribute('data-view'), s=a.getAttribute('data-scroll');
+    if(v===current && s){ var t=document.getElementById(s); if(t) t.scrollIntoView({behavior:reduce?'auto':'smooth'}); return; }
+    showView(v,s);
+  }
+  document.addEventListener('click',handleNav);
+
+  /* ---------- NAV scroll / on-hero ---------- */
+  function updateNav(){
+    if(!nav) return; var sc=window.scrollY>40;
+    nav.classList.toggle('scrolled',sc);
+    if(current==='speaker') nav.classList.toggle('on-hero',!sc); else nav.classList.remove('on-hero');
+  }
+  window.addEventListener('scroll',updateNav,{passive:true});
+
+  /* ---------- Burger ---------- */
+  var burger=document.getElementById('burger');
+  if(burger) burger.addEventListener('click',function(){var o=body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',o?'true':'false');});
+
+  /* ---------- Reveal (scroll) ---------- */
+  if(!reduce && 'IntersectionObserver' in window){
+    var ro=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+
+  /* ---------- Compteurs ---------- */
+  function frGroup(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' '); }
+  function animateCount(el){
+    if(el.dataset.done) return;
+    var src = el.getAttribute('data-count'); if(src===null) src = el.textContent;
+    var digits = (src.match(/[0-9]/g)||[]).join('');
+    if(!digits) return;
+    var target = parseInt(digits,10);
+    var suffixHTML = /\+/.test(el.textContent) ? '<span>+</span>' : '';
+    el.dataset.done='1';
+    var dur = reduce?0:1500, start=null;
+    el.classList.add('counting'); el.innerHTML='0'+suffixHTML;
+    function tick(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1), e=1-Math.pow(1-p,3);
+      el.innerHTML=frGroup(Math.floor(e*target))+suffixHTML;
+      if(p<1) requestAnimationFrame(tick);
+      else { el.innerHTML=frGroup(target)+suffixHTML; el.classList.remove('counting'); el.classList.add('counted'); }
+    }
+    requestAnimationFrame(tick);
+  }
+  /* Déclenche les compteurs au scroll (accueil incluse) */
+  if(!reduce && 'IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){animateCount(e.target);co.unobserve(e.target);}});},{threshold:.45});
+    document.querySelectorAll('.stat__num,.arena-card__num').forEach(function(el){co.observe(el);});
+  } else {
+    document.querySelectorAll('.stat__num,.arena-card__num').forEach(animateCount);
+  }
+
+  /* ---------- FAQ (si présent) ---------- */
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var it=q.parentElement,an=it.querySelector('.faq-a'),o=it.classList.toggle('open');q.setAttribute('aria-expanded',o?'true':'false');an.style.maxHeight=o?an.scrollHeight+'px':'0px';});});
+
+
+  /* ---------- Lightbox ---------- */
+  var lb=document.getElementById('lightbox');
+  if(lb){var frame=document.getElementById('lbFrame'),cap=document.getElementById('lbCap'),items=[],pos=0,last=null;
+    document.querySelectorAll('.gallery .ph').forEach(function(ph){items.push(ph);ph.setAttribute('tabindex','0');ph.setAttribute('role','button');ph.addEventListener('click',function(){openLb(items.indexOf(ph));});ph.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(items.indexOf(ph));}});});
+    function renderLb(){var ph=items[pos],img=ph.querySelector('img');frame.innerHTML=img?'<img src="'+img.getAttribute('src')+'" alt="'+(img.getAttribute('alt')||'')+'">':'<div class="ph-fill" style="aspect-ratio:16/10">'+(ph.getAttribute('data-cap')||'')+'</div>';cap.textContent=ph.getAttribute('data-cap')||'';}
+    function openLb(i){pos=i;last=document.activeElement;renderLb();lb.classList.add('open');body.classList.add('no-scroll');document.getElementById('lbClose').focus();}
+    function closeLb(){lb.classList.remove('open');body.classList.remove('no-scroll');if(last)last.focus();}
+    document.getElementById('lbClose').addEventListener('click',closeLb);
+    document.getElementById('lbPrev').addEventListener('click',function(){pos=(pos-1+items.length)%items.length;renderLb();});
+    document.getElementById('lbNext').addEventListener('click',function(){pos=(pos+1)%items.length;renderLb();});
+    lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+    document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();if(e.key==='ArrowRight')document.getElementById('lbNext').click();});
+  }
+
+  /* ---------- Formulaire ---------- */
+  var segs=document.querySelectorAll('.seg'),typeInput=document.getElementById('projectType');
+  function setType(t){segs.forEach(function(s){s.classList.toggle('active',s.getAttribute('data-type')===t);});var m={tv:'Projet TV / média',event:'Speaker / maître de cérémonie',autre:'Autre demande'};if(typeInput)typeInput.value=m[t]||'Autre demande';}
+  segs.forEach(function(s){s.addEventListener('click',function(){setType(s.getAttribute('data-type'));});});
+  document.querySelectorAll('[data-project]').forEach(function(b){b.addEventListener('click',function(){setType(b.getAttribute('data-project'));});});
+  var form=document.getElementById('form');
+  var MAIL_TO='tomdesse@gmail.com';
+  if(form)form.addEventListener('submit',function(e){e.preventDefault();
+    var val=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    var isEN=document.body.classList.contains('lang-en');
+    var type=(typeInput&&typeInput.value)||'Contact';
+    var nom=val('f-nom'), ent=val('f-ent'), mail=val('f-mail'), tel=val('f-tel'), date=val('f-date'), lieu=val('f-lieu'), msg=val('f-msg');
+    // Validation minimale : e-mail + message
+    if(!mail){var em=document.getElementById('f-mail');if(em)em.focus();return;}
+    if(!msg){var mm=document.getElementById('f-msg');if(mm)mm.focus();return;}
+    var subject='['+(isEN?'Booking':'Demande')+' – Thomas Desson] '+type+(nom?' – '+nom:'');
+    var lines=isEN
+      ? ['Type: '+type,'Name: '+nom,'Company: '+ent,'Email: '+mail,'Phone: '+tel,'Event date: '+date,'Location: '+lieu,'','Message:',msg]
+      : ['Type : '+type,'Nom : '+nom,'Entreprise : '+ent,'E-mail : '+mail,'Téléphone : '+tel,"Date de l'événement : "+date,'Lieu : '+lieu,'','Message :',msg];
+    var btn=form.querySelector('.form-submit');
+    var payload={_subject:subject,_captcha:'false',_template:'table',_replyto:mail,
+      Type:type,Nom:nom,Entreprise:ent,'E-mail':mail,'Téléphone':tel,"Date de l'événement":date,Lieu:lieu,Message:msg};
+    var errBox=document.getElementById('formErr'), okBox=document.getElementById('formOk');
+    function showOk(){if(errBox)errBox.classList.remove('show');if(okBox){okBox.classList.add('show');okBox.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+      ['f-nom','f-ent','f-mail','f-tel','f-date','f-lieu','f-msg'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});}
+    function showErr(){if(okBox)okBox.classList.remove('show');if(errBox){errBox.classList.add('show');errBox.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}}
+    if(btn){btn.disabled=true;btn.dataset.lbl=btn.innerHTML;btn.textContent=isEN?'Sending…':'Envoi en cours…';}
+    fetch('https://formsubmit.co/ajax/'+MAIL_TO,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json();})
+      .then(function(d){ if(d&&(d.success===true||d.success==='true')){showOk();} else {showErr();} })
+      .catch(function(){ showErr(); })
+      .then(function(){ if(btn){btn.disabled=false;if(btn.dataset.lbl)btn.innerHTML=btn.dataset.lbl;} });
+  });
+
+  document.querySelectorAll('#year').forEach(function(y){y.textContent=new Date().getFullYear();});
+
+  /* init */
+  applyLang(lang);
+  showView('home');
+})();
+
+</script>
+<script>
+/* Clic sur une vidéo de la bande démo = lecture immédiate (1er clic), sans déplacer la page */
+(function(){
+  document.querySelectorAll('#tv-demo video, #sp-demo video').forEach(function(v){
+    v.addEventListener('click', function(){
+      if(!v.dataset.started){ v.dataset.started='1'; var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+    });
+  });
+})();
+</script>
+<script>
+/* Une seule vidéo à la fois : arrêt automatique */
+(function(){
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  function pauseAll(except){ vids.forEach(function(o){ if(o!==except && !o.paused){ o.pause(); } }); }
+  /* 1) Lancer une vidéo met toutes les autres en pause */
+  vids.forEach(function(v){ v.addEventListener('play', function(){ pauseAll(v); }); });
+  /* 2) Changer d'univers (clic sur un lien de navigation de vue) coupe les vidéos */
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-view]:not(.view)')){ pauseAll(null); }
+  }, true);
+  /* 3) Onglet masqué / page quittée : on coupe */
+  document.addEventListener('visibilitychange', function(){ if(document.hidden){ pauseAll(null); } });
+})();
+</script>
+<script>
+/* Divulgation progressive « Voir plus » sur les grilles denses, aucun contenu retiré du DOM */
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setup(grid,keep,sel){
+    var items=Array.prototype.filter.call(grid.children,function(el){return el.matches(sel);});
+    if(items.length<=keep+1) return;
+    var hidden=items.slice(keep);
+    hidden.forEach(function(el){el.classList.add('is-collapsed');});
+    var wrap=document.createElement('div'); wrap.className='more-wrap reveal in';
+    var btn=document.createElement('button'); btn.type='button'; btn.className='more-toggle';
+    var n=hidden.length, open=false;
+    function label(){ btn.innerHTML = open
+      ? '<span lang="fr">Voir moins</span><span lang="en">Show less</span>'
+      : '<span lang="fr">Voir les '+n+' autres</span><span lang="en">Show '+n+' more</span>'; }
+    label();
+    btn.addEventListener('click',function(){
+      open=!open; btn.classList.toggle('open',open);
+      hidden.forEach(function(el){ el.classList.toggle('is-collapsed',!open); if(open) el.classList.add('in'); });
+      label();
+      if(!open){ grid.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}); }
+    });
+    wrap.appendChild(btn); grid.insertAdjacentElement('afterend',wrap);
+  }
+  document.querySelectorAll('.cards').forEach(function(g){ setup(g,6,'.card'); });
+  document.querySelectorAll('.skills').forEach(function(g){ setup(g,8,'.skill'); });
+})();
+</script>
+</body>
+</html>
