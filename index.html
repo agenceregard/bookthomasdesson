@@ -385,6 +385,7 @@ body.menu-open .mobile-menu{transform:none}
 span[lang]{}                                   /* conteneurs de langue inline */
 body:not(.lang-en) span[lang="en"]{display:none}
 body.lang-en span[lang="fr"]{display:none}
+body:not(.lang-en) .en-only{display:none}body.lang-en .fr-only{display:none}
 
 .lang-switch{display:inline-flex;border:1px solid currentColor;border-radius:40px;overflow:hidden;opacity:.85;transition:.3s}
 .lang-switch:hover{opacity:1}
@@ -565,8 +566,8 @@ body{line-height:1.68}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow"><span lang="fr">À propos</span><span lang="en">About</span></span>
-      <h2 class="h-title"><span lang="fr">Deux métiers,</span><span lang="en">Two roles.</span><br><span class="thin"><span lang="fr">un fil commun : le direct.</span><span lang="en">one common thread: live</span></span></h2>
-      <p style="margin-top:14px;margin-bottom:0;font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rouge)"><span lang="fr">20+ ans dans les médias en direct</span><span lang="en">20+ years in live media</span></p>
+      <h2 class="h-title"><span lang="fr">Deux métiers,</span><span lang="en">Two roles.</span><br><span class="thin"><span lang="fr">un fil commun : l'exigence du direct.</span><span lang="en">one common thread: live</span></span></h2>
+      <p class="en-only" style="margin-top:14px;margin-bottom:0;font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rouge)"><span lang="en">20+ years in live media</span></p>
     </div>
     <!-- DATA-ABOUT : texte provisoire à réécrire avec le vrai parcours. Ne rien inventer. -->
     <div class="about-grid reveal d1">
@@ -593,7 +594,7 @@ body{line-height:1.68}
     </div>
     <!-- DATA-STATS : mettez le vrai chiffre dans data-target. Vide = placeholder conservé (aucun faux chiffre). -->
     <div class="stats stats--featured">
-      <div class="stat stat--hero reveal"><div class="stat__num">20+</div><div class="stat__lbl"><span lang="fr">Années dans les médias en direct</span><span lang="en">Years in live media</span></div></div>
+      <div class="stat stat--hero reveal"><div class="stat__num">20+</div><div class="stat__lbl"><span lang="fr">Années d'expérience dans les médias</span><span lang="en">Years in live media</span></div></div>
       <div class="stats__rest">
         <div class="stat reveal d1"><div class="stat__num">4&nbsp;800+</div><div class="stat__lbl"><span lang="fr">Heures de direct</span><span lang="en">Hours on air</span></div></div>
         <div class="stat reveal d2"><div class="stat__num">2&nbsp;400+</div><div class="stat__lbl"><span lang="fr">Événements présentés, commentés ou animés</span><span lang="en">Events hosted, commentated or MC'd</span></div></div>
